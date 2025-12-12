@@ -80,7 +80,7 @@ export default function DonatePage() {
 
           <address className="not-italic whitespace-pre-line text-gray-700 dark:text-gray-300">
             Elvis for Congress
-            {"\n"}P.O. Box 1271
+            {"\n"}P.O. Box 1272
             {"\n"}Cedar Park, TX 78630
           </address>
           <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">

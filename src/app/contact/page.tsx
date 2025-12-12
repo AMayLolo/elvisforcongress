@@ -77,7 +77,7 @@ export default function ContactPage() {
         <h3 className="text-base font-semibold text-sky-900 dark:text-sky-100 mb-2">Mailing Address</h3>
         <address className="not-italic whitespace-pre-line">
           Elvis for Congress
-          {"\n"}P.O. Box 1271
+          {"\n"}P.O. Box 1272
           {"\n"}Cedar Park, TX 78630
         </address>
       </div>
