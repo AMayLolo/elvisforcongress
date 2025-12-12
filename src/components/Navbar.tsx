@@ -80,7 +80,7 @@ export default function Navbar() {
             onMouseEnter={openIssues}
             onMouseLeave={() => scheduleClose()}
           >
-            <Link href="/issues" className="text-white hover:underline inline-flex items-center" onClick={() => setIssuesOpen(false)}>
+            <Link href="/stand" className="text-white hover:underline inline-flex items-center" onClick={() => setIssuesOpen(false)}>
               Where I Stand
             </Link>
             {issuesOpen && (
@@ -91,19 +91,19 @@ export default function Navbar() {
               >
                 <ul className="py-2">
                     <li>
-                      <Link href="/issues#veterans" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Veterans</Link>
+                      <Link href="/stand#veterans" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Veterans</Link>
                     </li>
                     <li>
-                      <Link href="/issues#lowering-costs" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Lowering Costs</Link>
+                      <Link href="/stand#lowering-costs" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Lowering Costs</Link>
                     </li>
                     <li>
-                      <Link href="/issues#public-safety" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Public Safety</Link>
+                      <Link href="/stand#public-safety" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Public Safety</Link>
                     </li>
                     <li>
-                      <Link href="/issues#education" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Education & Workforce</Link>
+                      <Link href="/stand#education" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Education & Workforce</Link>
                     </li>
                     <li>
-                      <Link href="/issues#economic-growth" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Economic Growth</Link>
+                      <Link href="/stand#economic-growth" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Economic Growth</Link>
                     </li>
                 </ul>
               </div>
@@ -137,7 +137,7 @@ export default function Navbar() {
         <div className="md:hidden bg-sky-900">
           <div className="max-w-6xl mx-auto px-4 py-4 space-y-3">
             <Link href="/meet-elvis" className="block text-white py-2">About</Link>
-            <Link href="/issues" className="block text-white py-2">Where I Stand</Link>
+            <Link href="/stand" className="block text-white py-2">Where I Stand</Link>
             <Link href="/press" className="block text-white py-2">Press</Link>
             <Link href="/contact" className="block text-white py-2">Contact</Link>
             <Link href="/volunteer" className="block text-white py-2">Volunteer</Link>

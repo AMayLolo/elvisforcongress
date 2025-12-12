@@ -39,7 +39,7 @@ export default function Hero() {
 
           <div className="flex">
             <a
-              href="/issues"
+              href="/stand"
               className="px-6 py-3 rounded-md font-semibold bg-red-700 text-white hover:bg-red-800"
             >
               Where Elvis Stands
