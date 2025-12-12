@@ -5,6 +5,9 @@ import SmsSignupForm from "@/components/SmsSignupForm";
 import PageHeading from "@/components/PageHeading";
 
 export default function Home() {
+  const _rawWinRed = process.env.NEXT_PUBLIC_WINRED_URL || "";
+  const donateHref = (_rawWinRed ? _rawWinRed.replace(/^['\"]+|['\"]+$/g, "") : "") || "https://secure.winred.com/elvis-for-congress/donate-today";
+
   return (
     <div>
       <Hero />
@@ -44,8 +47,8 @@ export default function Home() {
         {/* Single centered Donate button below both forms */}
         <div className="mt-10">
           <a
-            href={process.env.NEXT_PUBLIC_WINRED_URL || "https://secure.winred.com/elvis-for-congress/donate-today"}
-            target={process.env.NEXT_PUBLIC_WINRED_URL ? "_blank" : "_blank"}
+            href={donateHref}
+            target={"_blank"}
             rel={"noopener noreferrer"}
             className="mx-auto block w-1/2 sm:w-1/4 bg-red-700 text-white font-semibold p-2 rounded-md text-sm hover:bg-red-800 text-center"
           >

@@ -9,7 +9,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const [issuesOpen, setIssuesOpen] = useState(false);
   const closeTimeoutRef = useRef<number | null>(null);
-  const donateHref = process.env.NEXT_PUBLIC_WINRED_URL || "https://secure.winred.com/elvis-for-congress/donate-today";
+  const _rawWinRed = process.env.NEXT_PUBLIC_WINRED_URL || "";
+  const donateHref = (_rawWinRed ? _rawWinRed.replace(/^['\"]+|['\"]+$/g, "") : "") || "https://secure.winred.com/elvis-for-congress/donate-today";
   const donateIsExternal = donateHref.startsWith("http");
 
   // Close the dropdown when the route changes

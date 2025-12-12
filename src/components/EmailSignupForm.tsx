@@ -9,7 +9,8 @@ export default function EmailSignupForm({
   showDonate?: boolean;
 }) {
   // Prefer an external WinRed URL when set, otherwise link to the site's donate landing page
-  const donateHref = process.env.NEXT_PUBLIC_WINRED_URL || "https://secure.winred.com/elvis-for-congress/donate-today";
+  const _rawWinRed = process.env.NEXT_PUBLIC_WINRED_URL || "";
+  const donateHref = (_rawWinRed ? _rawWinRed.replace(/^['\"]+|['\"]+$/g, "") : "") || "https://secure.winred.com/elvis-for-congress/donate-today";
   const donateIsExternal = donateHref.startsWith("http");
 
   const [email, setEmail] = useState("");
