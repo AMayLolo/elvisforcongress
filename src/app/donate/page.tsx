@@ -1,6 +1,13 @@
 function WinRedPixel() {
   const _rawWinRed = process.env.NEXT_PUBLIC_WINRED_URL || "";
-  const winred = (_rawWinRed ? _rawWinRed.replace(/^['\"]+|['\"]+$/g, "") : "") || "";
+  const _normalizeWinRed = (s: string) => {
+    if (!s) return s;
+    let v = s.replace(/^['\"]+|['\"]+$/g, "");
+    v = v.replace(/^http:\/\//i, "https://");
+    v = v.replace(/^https:\/\/www\.secure\.winred\.com/i, "https://secure.winred.com");
+    return v;
+  };
+  const winred = _normalizeWinRed(_rawWinRed) || "";
   if (!winred) return null;
   return (
     <img
@@ -20,7 +27,14 @@ export const metadata = {
 
 export default function DonatePage() {
   const _rawWinRed = process.env.NEXT_PUBLIC_WINRED_URL || "";
-  const winred = (_rawWinRed ? _rawWinRed.replace(/^['\"]+|['\"]+$/g, "") : "") || "https://secure.winred.com/elvis-for-congress/donate-today";
+  const _normalizeWinRed = (s: string) => {
+    if (!s) return s;
+    let v = s.replace(/^['\"]+|['\"]+$/g, "");
+    v = v.replace(/^http:\/\//i, "https://");
+    v = v.replace(/^https:\/\/www\.secure\.winred\.com/i, "https://secure.winred.com");
+    return v;
+  };
+  const winred = _normalizeWinRed(_rawWinRed) || "https://secure.winred.com/elvis-for-congress/donate-today";
   return (
     <div className="max-w-3xl mx-auto px-4 py-16 space-y-8">
       <WinRedPixel />
