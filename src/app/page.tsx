@@ -5,16 +5,8 @@ import SmsSignupForm from "@/components/SmsSignupForm";
 import PageHeading from "@/components/PageHeading";
 
 export default function Home() {
-  const _rawWinRed = process.env.NEXT_PUBLIC_WINRED_URL || "";
-  const _normalizeWinRed = (s: string) => {
-    if (!s) return s;
-    let v = s.replace(/^['\"]+|['\"]+$/g, "");
-    v = v.replace(/^http:\/\//i, "https://");
-    v = v.replace(/^https:\/\/www\.secure\.winred\.com/i, "https://secure.winred.com");
-    return v;
-  };
-
-  const donateHref = _normalizeWinRed(_rawWinRed) || "https://secure.winred.com/elvis-for-congress/donate-today";
+  // The central Donate button should lead to the site's internal donate page
+  const donateHref = "/donate";
 
   return (
     <div>
@@ -56,8 +48,6 @@ export default function Home() {
         <div className="mt-10">
           <a
             href={donateHref}
-            target={"_blank"}
-            rel={"noopener noreferrer"}
             className="mx-auto block w-1/2 sm:w-1/4 bg-red-700 text-white font-semibold p-2 rounded-md text-sm hover:bg-red-800 text-center"
           >
             Donate

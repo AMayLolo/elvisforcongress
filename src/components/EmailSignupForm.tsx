@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Toast from "./Toast";
 
 export default function EmailSignupForm({
@@ -8,18 +9,8 @@ export default function EmailSignupForm({
 }: {
   showDonate?: boolean;
 }) {
-  // Prefer an external WinRed URL when set, otherwise link to the site's donate landing page
-  const _rawWinRed = process.env.NEXT_PUBLIC_WINRED_URL || "";
-  const _normalizeWinRed = (s: string) => {
-    if (!s) return s;
-    let v = s.replace(/^['\"]+|['\"]+$/g, "");
-    v = v.replace(/^http:\/\//i, "https://");
-    v = v.replace(/^https:\/\/www\.secure\.winred\.com/i, "https://secure.winred.com");
-    return v;
-  };
-
-  const donateHref = _normalizeWinRed(_rawWinRed) || "https://secure.winred.com/elvis-for-congress/donate-today";
-  const donateIsExternal = donateHref.startsWith("http");
+  // Donate CTA should go to the site's internal donate page
+  const donateHref = "/donate";
 
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -73,23 +64,12 @@ export default function EmailSignupForm({
         {showDonate ? (
           <div className="pt-4 border-t border-gray-300 dark:border-gray-700">
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">Or support our campaign directly:</p>
-            {donateIsExternal ? (
-              <a
-                href={donateHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mx-auto block w-1/2 sm:w-1/3 bg-red-700 text-white font-semibold p-2 rounded-md text-sm hover:bg-red-800 text-center"
-              >
-                Donate
-              </a>
-            ) : (
-              <a
-                href={donateHref}
-                className="mx-auto block w-1/2 sm:w-1/3 bg-red-700 text-white font-semibold p-2 rounded-md text-sm hover:bg-red-800 text-center"
-              >
-                Donate
-              </a>
-            )}
+            <Link
+              href={donateHref}
+              className="mx-auto block w-1/2 sm:w-1/3 bg-red-700 text-white font-semibold p-2 rounded-md text-sm hover:bg-red-800 text-center"
+            >
+              Donate
+            </Link>
           </div>
         ) : null}
       </form>

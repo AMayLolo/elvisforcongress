@@ -9,9 +9,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const [issuesOpen, setIssuesOpen] = useState(false);
   const closeTimeoutRef = useRef<number | null>(null);
-  const _rawWinRed = process.env.NEXT_PUBLIC_WINRED_URL || "";
-  const donateHref = (_rawWinRed ? _rawWinRed.replace(/^['\"]+|['\"]+$/g, "") : "") || "https://secure.winred.com/elvis-for-congress/donate-today";
-  const donateIsExternal = donateHref.startsWith("http");
+  // Donate should go to the site's donate page so users see the campaign donate info first
+  const donateHref = "/donate";
 
   // Close the dropdown when the route changes
   useEffect(() => {
@@ -109,23 +108,12 @@ export default function Navbar() {
             Volunteer
           </Link>
 
-          {donateIsExternal ? (
-            <a
-              href={donateHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-red-700 text-white px-4 py-2 rounded-md font-semibold hover:bg-red-800"
-            >
-              Donate
-            </a>
-          ) : (
-            <Link
-              href={donateHref}
-              className="bg-red-700 text-white px-4 py-2 rounded-md font-semibold hover:bg-red-800"
-            >
-              Donate
-            </Link>
-          )}
+          <Link
+            href={donateHref}
+            className="bg-red-700 text-white px-4 py-2 rounded-md font-semibold hover:bg-red-800"
+          >
+            Donate
+          </Link>
 
           
         </div>
