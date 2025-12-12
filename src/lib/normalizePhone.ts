@@ -1,3 +1,5 @@
+import { parsePhoneNumberFromString } from "libphonenumber-js";
+
 export function normalizePhone(raw: string | null | undefined): string | null {
   if (!raw) return null;
   let s = String(raw).trim();
@@ -7,21 +9,24 @@ export function normalizePhone(raw: string | null | undefined): string | null {
     s = s.slice(1, -1).trim();
   }
 
-  // Remove all non-digit and non-plus characters
-  s = s.replace(/[^0-9+]/g, "");
+  // Quick cleanup
+  s = s.replace(/[()\s.-]/g, "");
 
-  // If it already starts with + and has digits, return as-is
-  if (s.startsWith("+") && /\+\d{7,15}$/.test(s)) return s;
+  // Try libphonenumber-js parsing (best effort). If it parses, return E.164.
+  try {
+    const parsed = parsePhoneNumberFromString(s, "US");
+    if (parsed && parsed.isValid()) {
+      return parsed.number; // E.164
+    }
+  } catch (e) {
+    // fallthrough to fallback logic
+  }
 
-  // Strip leading zeros
-  s = s.replace(/^0+/, "");
-
-  // If 10 digits, assume US and prefix +1
-  const digits = s.replace(/\D/g, "");
+  // Fallback: strip non-digits, assume US for 10-digit numbers
+  const digits = s.replace(/[^0-9]/g, "");
   if (digits.length === 10) return `+1${digits}`;
   if (digits.length === 11 && digits.startsWith("1")) return `+${digits}`;
   if (digits.length >= 7 && digits.length <= 15) return `+${digits}`;
 
-  // fallback: return raw cleaned digits or null
-  return digits ? `+${digits}` : null;
+  return null;
 }
