@@ -1,21 +1,11 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { normalizePhone } from "@/lib/normalizePhone";
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY;
 
 const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
-
-function normalizePhone(raw: string | null | undefined) {
-  if (!raw) return null;
-  // Basic normalization: strip non-digits
-  const digits = raw.replace(/[^0-9]/g, "");
-  if (digits.length === 10) return `+1${digits}`; // assume US if 10 digits
-  if (digits.length > 10 && digits[0] === "1") return `+${digits}`;
-  if (digits.startsWith("+")) return digits;
-  // fallback to raw cleaned number
-  return digits || null;
-}
 
 export async function POST(req: Request) {
   const data = await req.json().catch(() => ({}));

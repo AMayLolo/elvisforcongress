@@ -28,10 +28,23 @@ export default function SmsSignupForm({
 
     setSubmitting(true);
     try {
-      await fetch("/api/volunteer", {
+      // include some metadata and utm params if present
+      const params = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : "");
+      const utm: any = {};
+      for (const [k, v] of params.entries()) {
+        if (k.startsWith("utm_")) utm[k] = v;
+      }
+
+      await fetch("/api/sms", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ phone, type: "sms-signup" }),
+        body: JSON.stringify({
+          phone,
+          consent,
+          consentText: "I consent to receive SMS campaign updates.",
+          source: "homepage_sms_form",
+          utm: Object.keys(utm).length ? utm : null,
+        }),
       });
 
       setToastMessage("Thanks — you'll receive SMS updates from us!");
