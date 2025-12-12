@@ -154,7 +154,7 @@ export default function ExternalLeaveConfirm({ href, children, className, utm }:
               The next page will open on an external site to complete your donation. Do you want to continue?
             </p>
 
-            <div className="mt-4 flex justify-end space-x-2">
+            <div className="mt-4 flex justify-center gap-4">
               <button
                 ref={cancelRef}
                 type="button"
