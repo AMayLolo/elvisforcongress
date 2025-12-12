@@ -12,19 +12,19 @@ export const metadata = {
 export default function IssuesPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 space-y-4">
-      <div className="flex items-center justify-between">
-        <div className="flex-1">
+      <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className="flex-1 text-center md:text-left">
           <PageHeading as="h1">Where I Stand</PageHeading>
-          <p className="mt-2 text-sm md:text-base text-gray-700 dark:text-gray-300 whitespace-nowrap leading-tight">Serious leadership. Clear priorities. Accountability to the people.</p>
+          <p className="mt-2 text-sm md:text-base text-gray-700 dark:text-gray-300 leading-tight">Serious leadership. Clear priorities. Accountability to the people.</p>
         </div>
 
-        <div className="ml-4 mt-0 shrink-0 hidden md:block transform translate-x-6 md:translate-x-8">
+        <div className="mt-4 md:mt-0 md:ml-4 shrink-0">
           <Image
             src="/portrait.jpg"
             alt="Elvis portrait"
             width={150}
             height={150}
-            className="rounded-full shadow-md object-cover border-2 border-white dark:border-gray-800"
+            className="rounded-full shadow-md object-cover border-2 border-white dark:border-gray-800 mx-auto"
           />
         </div>
       </div>
