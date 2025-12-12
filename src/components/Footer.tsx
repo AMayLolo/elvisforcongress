@@ -1,6 +1,11 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { Twitter, Instagram, Facebook, Linkedin, X } from "lucide-react";
 
 export default function Footer() {
+  const pathname = usePathname();
   // NOTE: I added placeholder social links — replace them with the campaign's
   // actual social profile URLs when available.
   const socials = [
@@ -13,6 +18,18 @@ export default function Footer() {
   return (
     <footer className="w-full bg-sky-900 py-10 mt-20 text-white">
       <div className="max-w-6xl mx-auto px-4 text-center space-y-4">
+
+        {/* Prominent donate CTA — hide on the donate page itself */}
+        {pathname !== "/donate" && (
+          <div className="flex justify-center">
+            <Link
+              href="/donate"
+              className="inline-block bg-red-700 text-white px-6 py-3 rounded-md font-semibold hover:bg-red-800"
+            >
+              Donate
+            </Link>
+          </div>
+        )}
 
         {/* Social icons moved to the top of the footer, larger, with more spacing and brand-colored hover */}
         <div className="flex justify-center space-x-6 mb-3">
