@@ -24,3 +24,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Smooth scrolling for in-page anchors */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improve focus outlines for keyboard users
+   Use :focus-visible so mouse clicks don't show the ring, and allow
+   elements to opt-out by adding the attribute `data-no-focus-ring`.
+*/
+:focus-visible:not([data-no-focus-ring]) {
+  outline: 2px solid rgba(220, 38, 38, 0.8); /* red ring */
+  outline-offset: 2px;
+}
