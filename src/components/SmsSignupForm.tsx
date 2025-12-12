@@ -8,8 +8,9 @@ export default function SmsSignupForm({
 }: {
   showDonate?: boolean;
 }) {
-  // Always link to the site's donate landing page so users see online + mail options
-  const donateHref = "/donate";
+  // Prefer an external WinRed URL when set, otherwise link to the site's donate landing page
+  const donateHref = process.env.NEXT_PUBLIC_WINRED_URL || "https://secure.winred.com/elvis-for-congress/donate-today";
+  const donateIsExternal = donateHref.startsWith("http");
 
   const [phone, setPhone] = useState("");
   const [consent, setConsent] = useState(false);
@@ -73,12 +74,23 @@ export default function SmsSignupForm({
         {showDonate ? (
           <div className="pt-4 border-t border-gray-300 dark:border-gray-700">
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">Or support our campaign directly:</p>
-            <a
-              href={donateHref}
-              className="mx-auto block w-1/2 sm:w-1/3 bg-red-700 text-white font-semibold p-2 rounded-md text-sm hover:bg-red-800 text-center"
-            >
-              Donate Now
-            </a>
+            {donateIsExternal ? (
+              <a
+                href={donateHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-auto block w-1/2 sm:w-1/3 bg-red-700 text-white font-semibold p-2 rounded-md text-sm hover:bg-red-800 text-center"
+              >
+                Donate
+              </a>
+            ) : (
+              <a
+                href={donateHref}
+                className="mx-auto block w-1/2 sm:w-1/3 bg-red-700 text-white font-semibold p-2 rounded-md text-sm hover:bg-red-800 text-center"
+              >
+                Donate
+              </a>
+            )}
           </div>
         ) : null}
       </form>

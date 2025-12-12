@@ -44,10 +44,12 @@ export default function Home() {
         {/* Single centered Donate button below both forms */}
         <div className="mt-10">
           <a
-            href="/donate"
+            href={process.env.NEXT_PUBLIC_WINRED_URL || "https://secure.winred.com/elvis-for-congress/donate-today"}
+            target={process.env.NEXT_PUBLIC_WINRED_URL ? "_blank" : "_blank"}
+            rel={"noopener noreferrer"}
             className="mx-auto block w-1/2 sm:w-1/4 bg-red-700 text-white font-semibold p-2 rounded-md text-sm hover:bg-red-800 text-center"
           >
-            Donate Now
+            Donate
           </a>
           <p id="support-cta" className="text-center text-lg font-medium dark:text-white mt-3">Support the campaign!</p>
         </div>

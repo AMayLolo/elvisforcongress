@@ -18,7 +18,7 @@ export const metadata = {
 };
 
 export default function DonatePage() {
-  const winred = process.env.NEXT_PUBLIC_WINRED_URL;
+  const winred = process.env.NEXT_PUBLIC_WINRED_URL || "https://secure.winred.com/elvis-for-congress/donate-today";
   return (
     <div className="max-w-3xl mx-auto px-4 py-16 space-y-8">
       <WinRedPixel />
