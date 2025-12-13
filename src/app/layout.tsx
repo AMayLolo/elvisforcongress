@@ -17,6 +17,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://www.elvisforcongress.com" />
+        {/* Favicons: uses the campaign image in /public (png accepted by browsers) */}
+        <link rel="icon" href="/elvis.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/elvis.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/elvis.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/portrait.jpg" />
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
