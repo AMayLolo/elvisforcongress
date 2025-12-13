@@ -51,7 +51,7 @@ export default function Navbar() {
 
   return (
   <nav className="w-full bg-sky-800">
-    <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+    <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
   <Link href="/" className="flex items-center" aria-label="Elvis for Congress">
           {/* Inline SVG logo to avoid external fetch failures and improve reliability */}
             <svg
@@ -59,7 +59,7 @@ export default function Navbar() {
               aria-label="Elvis for Congress logo"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1280 1024"
-              className="h-20 w-auto"
+              className="h-24 md:h-28 w-auto"
             >
               <defs>
                 <style>{`.st0{font-family:Arial-Black,'Arial Black';font-size:46px;font-weight:800;letter-spacing:.16em}.st0,.st1{fill:#fff}`}</style>
@@ -161,7 +161,7 @@ export default function Navbar() {
       {/* Mobile menu: shown only on small screens when toggled */}
       {mobileOpen && (
         <div className="md:hidden bg-sky-900">
-          <div className="max-w-7xl mx-auto px-6 py-3 space-y-3">
+          <div className="max-w-7xl mx-auto px-6 py-4 space-y-3">
             <Link href="/meet-elvis" className="block text-white py-2">About</Link>
             <Link href="/stand" className="block text-white py-2">Where I Stand</Link>
             <Link href="/press" className="block text-white py-2">Press</Link>
