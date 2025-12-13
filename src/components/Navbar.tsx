@@ -52,8 +52,12 @@ export default function Navbar() {
   return (
     <nav className="w-full bg-sky-900">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold text-white">
-          Elvis for Congress
+        <Link href="/" className="flex items-center">
+          <img
+            src="/ELVIS_Primary_Horizontal_FullColor.svg"
+            alt="Elvis for Congress"
+            className="h-8"
+          />
         </Link>
 
         {/* mobile menu button */}
