@@ -26,8 +26,9 @@ import PageHeading from "@/components/PageHeading";
 
 export default function ContactPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-16 space-y-10">
-      <PageHeading>Contact Us</PageHeading>
+    <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-4xl space-y-10">
+        <PageHeading>Contact Us</PageHeading>
 
       <p className="text-lg dark:text-gray-300">
         Have questions? Want to share your concerns? Our team is here to help.
@@ -92,14 +93,15 @@ export default function ContactPage() {
         </button>
       </form>
 
-      {/* Mailing address */}
-      <div className="mt-8 text-sm text-gray-700 dark:text-gray-300">
-        <h3 className="text-base font-semibold text-sky-900 dark:text-sky-100 mb-2">Mailing Address</h3>
-        <address className="not-italic whitespace-pre-line">
-          Elvis for Congress
-          {"\n"}P.O. Box 1272
-          {"\n"}Cedar Park, TX 78630
-        </address>
+        {/* Mailing address */}
+        <div className="mt-8 text-sm text-gray-700 dark:text-gray-300">
+          <h3 className="text-base font-semibold text-sky-900 dark:text-sky-100 mb-2">Mailing Address</h3>
+          <address className="not-italic whitespace-pre-line">
+            Elvis for Congress
+            {"\n"}P.O. Box 1272
+            {"\n"}Cedar Park, TX 78630
+          </address>
+        </div>
       </div>
     </div>
   );

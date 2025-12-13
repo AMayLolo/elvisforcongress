@@ -28,15 +28,17 @@ import VolunteerForm from "@/components/VolunteerForm";
 
 export default function VolunteerPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-16 space-y-10">
-  <PageHeading>Volunteer</PageHeading>
+    <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-4xl space-y-10">
+        <PageHeading>Volunteer</PageHeading>
 
-      <p className="text-lg dark:text-gray-300">
-        This movement is powered by people like you. No experience necessary —
-        just passion and a desire to make a difference.
-      </p>
+        <p className="text-lg dark:text-gray-300">
+          This movement is powered by people like you. No experience necessary —
+          just passion and a desire to make a difference.
+        </p>
 
-      <VolunteerForm />
+        <VolunteerForm />
+      </div>
     </div>
   );
 }
