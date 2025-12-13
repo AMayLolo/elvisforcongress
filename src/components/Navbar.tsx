@@ -56,7 +56,13 @@ export default function Navbar() {
           <img
             src="/ELVIS_Primary_Horizontal_FullColor.svg"
             alt="Elvis for Congress"
-            className="h-8"
+            className="h-8 w-auto"
+            onError={(e) => {
+              // If the SVG fails to load (some browsers / CDNs), fall back to the PNG
+              // Use currentTarget to satisfy React's SyntheticEvent typing
+              // @ts-ignore - DOM property assignment
+              e.currentTarget.src = '/elvis.png';
+            }}
           />
         </Link>
 
