@@ -51,15 +51,15 @@ export default function Navbar() {
 
   return (
   <nav className="w-full bg-sky-800">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-  <Link href="/" className="flex items-center pl-4 md:pl-6" aria-label="Elvis for Congress">
+    <div className="max-w-6xl mx-auto px-4 py-10 flex justify-between items-center">
+  <Link href="/" className="flex items-center pl-12 md:pl-16" aria-label="Elvis for Congress">
           {/* Inline SVG logo to avoid external fetch failures and improve reliability */}
             <svg
               role="img"
               aria-label="Elvis for Congress logo"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1280 1024"
-              className="h-12 w-auto md:h-16"
+              className="h-60 w-auto md:h-72 lg:h-96"
             >
               <defs>
                 <style>{`.st0{font-family:Arial-Black,'Arial Black';font-size:46px;font-weight:800;letter-spacing:.16em}.st0,.st1{fill:#fff}`}</style>
