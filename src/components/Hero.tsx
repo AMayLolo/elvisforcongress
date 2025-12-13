@@ -3,18 +3,18 @@ import Button from "./Button";
 
 export default function Hero() {
   return (
-  <section className="w-full bg-gradient-to-r from-sky-800 to-sky-700 text-white py-12">
+  <section className="w-full bg-gradient-to-r from-sky-800 to-sky-700 text-white py-16">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
         {/* Logo on left */}
         <div className="flex justify-center md:justify-start">
           {/* circular frame stays fixed; inner image is moved/scaled inside the circle */}
-              <div className="w-64 aspect-square rounded-2xl overflow-hidden shadow-xl relative">
+              <div className="w-72 sm:w-80 md:w-96 aspect-square rounded-2xl overflow-hidden shadow-xl relative">
             <Image
               src="/elvis.png"
               alt="Photo of Elvis"
               fill
-              sizes="256px"
+              sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
               priority
                   className="object-cover object-bottom scale-105"
             />
