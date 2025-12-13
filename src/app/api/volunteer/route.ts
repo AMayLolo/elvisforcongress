@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { normalizePhone } from "@/lib/normalizePhone";
+import { notifyStaff } from "@/lib/notify";
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY;
@@ -14,6 +15,16 @@ export async function POST(req: Request) {
 
   if (!supabase) {
     console.warn("Supabase not configured — skipping DB insert");
+    // best-effort notification to staff (no DB available)
+    try {
+      await notifyStaff({
+        subject: `New volunteer: ${data.firstName || ''} ${data.lastName || ''}`,
+        text: `New volunteer submission:\n${JSON.stringify(data, null, 2)}`,
+      });
+    } catch (e) {
+      console.error('notifyStaff failed for volunteer (no DB):', e);
+    }
+
     return NextResponse.json({ success: true });
   }
 
@@ -57,6 +68,16 @@ export async function POST(req: Request) {
       }
     } catch (e) {
       console.error("sms upsert failed:", e);
+    }
+
+    // best-effort notification to staff
+    try {
+      await notifyStaff({
+        subject: `New volunteer: ${payload.first_name || ''} ${payload.last_name || ''}`,
+        text: `New volunteer submission:\n${JSON.stringify(payload, null, 2)}`,
+      });
+    } catch (e) {
+      console.error('notifyStaff failed for volunteer:', e);
     }
 
     return NextResponse.json({ success: true });

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { notifyStaff } from "@/lib/notify";
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY;
@@ -27,6 +28,16 @@ export async function POST(req: Request) {
     if (error) {
       console.error("Supabase insert error:", error);
       return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+    }
+
+    // send notification to staff (best-effort)
+    try {
+      await notifyStaff({
+        subject: `New contact signup: ${payload.email || 'no-email'}`,
+        text: `New contact submission:\n${JSON.stringify(payload.meta || {}, null, 2)}`,
+      });
+    } catch (e) {
+      console.error('notifyStaff failed for contact:', e);
     }
 
     return NextResponse.json({ success: true });
