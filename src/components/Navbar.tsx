@@ -3,10 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+// ...existing code...
 
 export default function Navbar() {
-  
   const pathname = usePathname();
   const [issuesOpen, setIssuesOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -51,24 +50,18 @@ export default function Navbar() {
   }, []);
 
   return (
-  <nav className="w-full bg-sky-800">
-<<<<<<< HEAD
-    <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-=======
-    <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
->>>>>>> 0dd7ac0 (updates)
-  <Link href="/" className="flex items-center" aria-label="Elvis for Congress">
-          <Image
-            src="/ELVIS_Primary_Horizontal_White.svg"
-            alt="Elvis for Congress logo"
-            width={320}
-            height={256}
-            priority
-<<<<<<< HEAD
-            className="h-32 md:h-40 w-auto"
-=======
-            className="h-24 md:h-28 w-auto"
->>>>>>> 0dd7ac0 (updates)
+    <nav className="w-full bg-sky-800">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <Link href="/" className="flex items-center" aria-label="Elvis for Congress">
+          <img
+            src="/logo_main.svg"
+            alt="Elvis for Congress"
+            className="h-16 w-auto md:h-20 lg:h-24"
+            onError={(e) => {
+              const img = e.currentTarget as HTMLImageElement;
+              img.onerror = null;
+              img.src = "/elvis.png";
+            }}
           />
         </Link>
 
@@ -106,21 +99,21 @@ export default function Navbar() {
                 onMouseLeave={() => scheduleClose()}
               >
                 <ul className="py-2">
-                    <li>
-                      <Link href="/stand#veterans" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Veterans</Link>
-                    </li>
-                    <li>
-                      <Link href="/stand#lowering-costs" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Lowering Costs</Link>
-                    </li>
-                    <li>
-                      <Link href="/stand#public-safety" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Public Safety</Link>
-                    </li>
-                    <li>
-                      <Link href="/stand#education" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Education & Workforce</Link>
-                    </li>
-                    <li>
-                      <Link href="/stand#economic-growth" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Economic Growth</Link>
-                    </li>
+                  <li>
+                    <Link href="/stand#veterans" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Veterans</Link>
+                  </li>
+                  <li>
+                    <Link href="/stand#lowering-costs" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Lowering Costs</Link>
+                  </li>
+                  <li>
+                    <Link href="/stand#public-safety" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Public Safety</Link>
+                  </li>
+                  <li>
+                    <Link href="/stand#education" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Education & Workforce</Link>
+                  </li>
+                  <li>
+                    <Link href="/stand#economic-growth" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Economic Growth</Link>
+                  </li>
                 </ul>
               </div>
             )}
@@ -144,7 +137,6 @@ export default function Navbar() {
           >
             Donate
           </Link>
-        
         </div>
       </div>
 
@@ -164,3 +156,4 @@ export default function Navbar() {
     </nav>
   );
 }
+// ...existing code...
