@@ -50,16 +50,16 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="w-full bg-sky-900">
+  <nav className="w-full bg-sky-800">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center" aria-label="Elvis for Congress">
+  <Link href="/" className="flex items-center pl-4 md:pl-6" aria-label="Elvis for Congress">
           {/* Inline SVG logo to avoid external fetch failures and improve reliability */}
-          <svg
+            <svg
             role="img"
             aria-label="Elvis for Congress logo"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1280 1024"
-            className="h-10 w-auto md:h-12"
+            className="h-12 w-auto md:h-16"
           >
             <defs>
               <style>{`.st0{fill:#dc2626}.st1{font-family:Arial-Black,'Arial Black';font-size:46px;font-weight:800;letter-spacing:.16em}.st1,.st2{fill:#ffffff}`}</style>
