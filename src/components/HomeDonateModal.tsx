@@ -9,7 +9,7 @@ export default function HomeDonateModal() {
   const [open, setOpen] = useState(false);
   const prevPathRef = useRef<string | null>(null);
   const modalRef = useRef<HTMLDivElement | null>(null);
-  const cancelRef = useRef<HTMLButtonElement | null>(null);
+  const donateRef = useRef<HTMLButtonElement | null>(null);
 
   // Open modal when navigating to the home page (initial load or internal nav)
   useEffect(() => {
@@ -62,10 +62,10 @@ export default function HomeDonateModal() {
     };
 
     document.addEventListener("keydown", onKeyDown);
-    // set initial focus to cancel button
+    // set initial focus to Donate button
     setTimeout(() => {
       try {
-        cancelRef.current?.focus();
+        donateRef.current?.focus();
       } catch (e) {
         // ignore
       }
@@ -95,23 +95,26 @@ export default function HomeDonateModal() {
           Your support powers the campaign. Would you consider making a contribution to help us reach more voters?
         </p>
 
-        <div className="mt-4 flex justify-center gap-3">
+        <div className="mt-4 flex flex-col items-center gap-3">
           <button
-            ref={cancelRef}
-            type="button"
-            className="px-4 py-2 rounded-md border bg-white dark:bg-gray-800"
-            onClick={closeModal}
-          >
-            Not now
-          </button>
-
-          <button
+            ref={donateRef}
             type="button"
             className="px-4 py-2 rounded-md bg-red-700 text-white hover:bg-red-800"
             onClick={handleDonate}
           >
             Donate
           </button>
+
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              closeModal();
+            }}
+            className="text-sm text-gray-600 hover:underline mt-1"
+          >
+            Donate later
+          </a>
         </div>
       </div>
     </div>
