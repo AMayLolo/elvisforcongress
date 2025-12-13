@@ -1,5 +1,26 @@
 export const metadata = {
-  title: "Volunteer | Elvis for Congress",
+  title: "Volunteer | Elvis Lossa for Congress",
+  description:
+    "Help the campaign — sign up to volunteer, host, or canvass in District 31.",
+  openGraph: {
+    title: "Volunteer | Elvis Lossa for Congress",
+    description: "Help the campaign — sign up to volunteer, host, or canvass in District 31.",
+    url: "https://www.elvisforcongress.com/volunteer",
+    images: [
+      {
+        url: "https://www.elvisforcongress.com/og/volunteer.svg",
+        alt: "Volunteer for Elvis Lossa",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Volunteer | Elvis Lossa for Congress",
+    description: "Help the campaign — sign up to volunteer, host, or canvass in District 31.",
+    images: ["https://www.elvisforcongress.com/og/volunteer.svg"],
+  },
 };
 
 import PageHeading from "@/components/PageHeading";

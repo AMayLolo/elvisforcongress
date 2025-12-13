@@ -1,3 +1,30 @@
+export const metadata = {
+  title: "Elvis Lossa for Congress | District 31",
+  description:
+    "Join Elvis Lossa's campaign to bring commonsense leadership and economic opportunity to District 31. Volunteer, donate, or learn where he stands.",
+  openGraph: {
+    title: "Elvis Lossa for Congress | District 31",
+    description:
+      "Join Elvis Lossa's campaign to bring commonsense leadership and economic opportunity to District 31. Volunteer, donate, or learn where he stands.",
+    url: "https://www.elvisforcongress.com/",
+    images: [
+      {
+        url: "https://www.elvisforcongress.com/og/home.svg",
+        alt: "Elvis Lossa for Congress — Home",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Elvis Lossa for Congress | District 31",
+    description:
+      "Join Elvis Lossa's campaign to bring commonsense leadership and economic opportunity to District 31.",
+    images: ["https://www.elvisforcongress.com/og/home.svg"],
+  },
+};
+
 import Hero from "@/components/Hero";
 import Link from "next/link";
 import EmailSignupForm from "@/components/EmailSignupForm";

@@ -3,3 +3,6 @@ Allow: /
 
 # Point to sitemap
 Sitemap: https://www.elvisforcongress.com/sitemap.xml
+
+# Preferred host
+Host: https://www.elvisforcongress.com

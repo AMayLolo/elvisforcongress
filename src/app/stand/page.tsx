@@ -5,7 +5,30 @@ import EmailSignupForm from "@/components/EmailSignupForm";
 import SmsSignupForm from "@/components/SmsSignupForm";
 
 export const metadata = {
-  title: "Where I Stand | Elvis for Congress",
+  title: "Where I Stand | Elvis Lossa for Congress",
+  description:
+    "Elvis Lossa's positions on economic growth, education, public safety, veterans, and fiscal accountability.",
+  openGraph: {
+    title: "Where I Stand | Elvis Lossa for Congress",
+    description:
+      "Elvis Lossa's positions on economic growth, education, public safety, veterans, and fiscal accountability.",
+    url: "https://www.elvisforcongress.com/stand",
+    images: [
+      {
+        url: "https://www.elvisforcongress.com/og/stand.svg",
+        alt: "Where I Stand — Elvis Lossa for Congress",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Where I Stand | Elvis Lossa for Congress",
+    description:
+      "Elvis Lossa's positions on the key priorities facing District 31.",
+    images: ["https://www.elvisforcongress.com/og/stand.svg"],
+  },
 };
 
 export default function IssuesPage() {

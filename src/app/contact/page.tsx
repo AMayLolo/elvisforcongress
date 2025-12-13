@@ -1,5 +1,25 @@
 export const metadata = {
-  title: "Contact | Elvis for Congress",
+  title: "Contact | Elvis Lossa for Congress",
+  description: "Contact Elvis Lossa's campaign for questions, support, or media inquiries.",
+  openGraph: {
+    title: "Contact | Elvis Lossa for Congress",
+    description: "Contact Elvis Lossa's campaign for questions, support, or media inquiries.",
+    url: "https://www.elvisforcongress.com/contact",
+    images: [
+      {
+        url: "https://www.elvisforcongress.com/og/contact.svg",
+        alt: "Contact Elvis Lossa for Congress",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact | Elvis Lossa for Congress",
+    description: "Contact Elvis Lossa's campaign for questions, support, or media inquiries.",
+    images: ["https://www.elvisforcongress.com/og/contact.svg"],
+  },
 };
 
 import PageHeading from "@/components/PageHeading";

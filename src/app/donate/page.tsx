@@ -22,7 +22,30 @@ import ExternalLeaveConfirm from "@/components/ExternalLeaveConfirm";
 import PageHeading from "@/components/PageHeading";
 
 export const metadata = {
-  title: "Donate | Elvis for Congress",
+  title: "Donate | Elvis Lossa for Congress",
+  description:
+    "Support Elvis Lossa’s campaign for District 31 — learn how donations are used and complete your secure contribution.",
+  openGraph: {
+    title: "Donate | Elvis Lossa for Congress",
+    description:
+      "Support Elvis Lossa’s campaign for District 31 — learn how donations are used and complete your secure contribution.",
+    url: "https://www.elvisforcongress.com/donate",
+    images: [
+      {
+        url: "https://www.elvisforcongress.com/og/donate.svg",
+        alt: "Donate to Elvis Lossa for Congress",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Donate | Elvis Lossa for Congress",
+    description:
+      "Support Elvis Lossa’s campaign for District 31 — learn how donations are used and complete your secure contribution.",
+    images: ["https://www.elvisforcongress.com/og/donate.svg"],
+  },
 };
 
 export default function DonatePage() {

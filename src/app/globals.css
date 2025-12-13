@@ -30,9 +30,9 @@ body {
 /* Smooth scrolling for in-page anchors */
 html {
   scroll-behavior: smooth;
-  /* Root font-size: lower to modern desktop baseline so rem-based sizes feel
-     less 'large' by default. Set to 14px which is a common modern baseline. */
-  font-size: 14px; /* default 16px -> reduce to 14px (~-12.5%) */
+  /* Root font-size: choose a middle baseline so rem-based sizes feel balanced.
+    Increase slightly from 14px to 15px to land between the previous sizes. */
+  font-size: 15px; /* default 16px -> 15px (approx -6.25%) */
 }
 
 /* Improve focus outlines for keyboard users
@@ -48,27 +48,27 @@ html {
    on the reduced root font-size. These apply to raw h1/h2/h3 elements and
    complement Tailwind classes where used. */
 h1 {
-  font-size: 2rem; /* ~28px */
+  font-size: 2rem; /* ~30px */
   line-height: 1.15;
   margin-top: 0;
   margin-bottom: 0.6em;
 }
 
 h2 {
-  font-size: 1.5rem; /* ~21px */
+  font-size: 1.5rem; /* ~22.5px */
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 0.5em;
 }
 
 h3 {
-  font-size: 1.25rem; /* ~17.5px */
+  font-size: 1.25rem; /* ~18.75px */
   line-height: 1.25;
   margin-top: 0;
   margin-bottom: 0.45em;
 }
 
 p {
-  font-size: 1rem; /* 14px */
+  font-size: 1rem; /* 15px */
   margin-bottom: 1em;
 }

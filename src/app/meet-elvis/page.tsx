@@ -1,5 +1,28 @@
 export const metadata = {
-  title: "Meet Elvis | Elvis for Congress",
+  title: "Meet Elvis | Elvis Lossa for Congress",
+  description:
+    "Learn about Elvis Lossa's background, values, and motivation to represent District 31.",
+  openGraph: {
+    title: "Meet Elvis | Elvis Lossa for Congress",
+    description:
+      "Learn about Elvis Lossa's background, values, and motivation to represent District 31.",
+    url: "https://www.elvisforcongress.com/meet-elvis",
+    images: [
+      {
+        url: "https://www.elvisforcongress.com/og/meet-elvis.svg",
+        alt: "Meet Elvis Lossa",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Meet Elvis | Elvis Lossa for Congress",
+    description:
+      "Learn about Elvis Lossa's background, values, and motivation to represent District 31.",
+    images: ["https://www.elvisforcongress.com/og/meet-elvis.svg"],
+  },
 };
 
 import Image from "next/image";
