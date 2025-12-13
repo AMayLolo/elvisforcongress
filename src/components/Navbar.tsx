@@ -59,10 +59,10 @@ export default function Navbar() {
             aria-label="Elvis for Congress logo"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1280 1024"
-            className="h-8 w-auto"
+            className="h-10 w-auto md:h-12"
           >
             <defs>
-              <style>{`.st0{fill:#c1272d}.st1{font-family:Arial-Black,'Arial Black';font-size:46px;font-weight:800;letter-spacing:.16em}.st1,.st2{fill:#253e5d}`}</style>
+              <style>{`.st0{fill:#dc2626}.st1{font-family:Arial-Black,'Arial Black';font-size:46px;font-weight:800;letter-spacing:.16em}.st1,.st2{fill:#ffffff}`}</style>
             </defs>
             <path className="st2" d="M279.15,427.45h146.42v37.75h-91.66v28.1h85.03v36.06h-85.03v34.86h94.31v40.04h-149.07v-176.81Z" />
             <path className="st2" d="M457.65,427.45h54.63v133.27h85.27v43.54h-139.9v-176.81Z" />
