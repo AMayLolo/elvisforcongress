@@ -1,0 +1,15 @@
+{
+  "name": "Elvis for Congress",
+  "short_name": "Elvis",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0369a1",
+  "icons": [
+    {
+      "src": "/elvis.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
