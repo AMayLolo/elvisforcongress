@@ -8,7 +8,7 @@ import HomeDonateModal from "@/components/HomeDonateModal";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Elvis for Congress | District 31",
+  title: "Elvis Lossa for Congress | District 31",
   description:
     "Elvis is running for U.S. Congress to bring integrity, accountability, and real solutions to District 31.",
 };
@@ -26,14 +26,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="manifest" href="/site.webmanifest" />
 
         {/* Open Graph / Twitter meta for better discovery and link previews */}
-        <meta property="og:title" content="Elvis for Congress | District 31" />
+  <meta property="og:title" content="Elvis Lossa for Congress | District 31" />
         <meta property="og:description" content="Elvis is running for U.S. Congress to bring integrity, accountability, and real solutions to District 31." />
         <meta property="og:image" content="https://www.elvisforcongress.com/elvis.png" />
         <meta property="og:url" content="https://www.elvisforcongress.com" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Elvis for Congress | District 31" />
+  <meta name="twitter:title" content="Elvis Lossa for Congress | District 31" />
         <meta name="twitter:description" content="Elvis is running for U.S. Congress to bring integrity, accountability, and real solutions to District 31." />
         <meta name="twitter:image" content="https://www.elvisforcongress.com/elvis.png" />
 
