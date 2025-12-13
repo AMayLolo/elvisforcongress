@@ -52,7 +52,7 @@ export default function Navbar() {
 
   return (
   <nav className="w-full bg-sky-800">
-    <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
   <Link href="/" className="flex items-center" aria-label="Elvis for Congress">
           <Image
             src="/ELVIS_Primary_Horizontal_White.svg"
@@ -60,7 +60,7 @@ export default function Navbar() {
             width={320}
             height={256}
             priority
-            className="h-24 md:h-28 w-auto"
+            className="h-32 md:h-40 w-auto"
           />
         </Link>
 
