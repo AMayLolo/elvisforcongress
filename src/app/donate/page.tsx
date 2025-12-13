@@ -59,10 +59,11 @@ export default function DonatePage() {
   };
   const winred = _normalizeWinRed(_rawWinRed) || "https://secure.winred.com/elvis-for-congress/donate-today";
   return (
-    <div className="max-w-3xl mx-auto px-4 py-16 space-y-8">
-      <WinRedPixel />
+    <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-3xl space-y-8">
+        <WinRedPixel />
 
-  <PageHeading>Donate</PageHeading>
+        <PageHeading>Donate</PageHeading>
 
       <p className="text-lg dark:text-gray-300">
         Your contribution gives our campaign the resources we need to reach
@@ -110,6 +111,7 @@ export default function DonatePage() {
             Please make checks payable to <span className="font-semibold">Elvis for Congress</span> and note "Donation" in the memo.
           </p>
         </div>
+      </div>
       </div>
     </div>
   );

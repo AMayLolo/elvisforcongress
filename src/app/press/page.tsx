@@ -6,8 +6,9 @@ import PageHeading from "@/components/PageHeading";
 
 export default function PressPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-16 space-y-10">
-  <PageHeading>Press & Media</PageHeading>
+    <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-4xl space-y-10">
+        <PageHeading>Press & Media</PageHeading>
 
       <p className="text-lg dark:text-gray-300">
         Members of the media may find official resources, assets, and contact
@@ -24,15 +25,16 @@ export default function PressPage() {
         </p>
       </section>
 
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold dark:text-white">Downloads</h2>
-        <ul className="list-disc ml-6 space-y-2 dark:text-gray-300">
-          <li>Official Logos (PNG)</li>
-          <li>Campaign Branding Guide (PDF)</li>
-          <li>Press Kit (ZIP)</li>
-          <li>High-resolution headshots (Coming Soon)</li>
-        </ul>
-      </section>
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold dark:text-white">Downloads</h2>
+          <ul className="list-disc ml-6 space-y-2 dark:text-gray-300">
+            <li>Official Logos (PNG)</li>
+            <li>Campaign Branding Guide (PDF)</li>
+            <li>Press Kit (ZIP)</li>
+            <li>High-resolution headshots (Coming Soon)</li>
+          </ul>
+        </section>
+      </div>
     </div>
   );
 }

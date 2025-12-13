@@ -31,8 +31,9 @@ import PageHeading from "@/components/PageHeading";
 
 export default function MeetElvisPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-16 space-y-6">
-  <PageHeading>Meet Elvis</PageHeading>
+    <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-4xl space-y-6">
+        <PageHeading>Meet Elvis</PageHeading>
       <p className="text-lg font-semibold dark:text-gray-300">Public service is not about slogans. It is about results.</p>
 
       <p className="text-lg dark:text-gray-300">I am a U.S. Army combat veteran, a father, and a public servant. Most recently, I served as Policy Coordinator for the Texas Speaker of the House, working on complex policy and operational challenges that affect communities across our state.</p>
@@ -87,22 +88,23 @@ export default function MeetElvisPage() {
 
       <p className="text-lg dark:text-gray-300">I am running for Congress to bring experience, accountability, and a results-driven approach to serving Central Texas.</p>
 
-      <div className="mt-8 grid md:grid-cols-3 gap-8 items-center">
-        <div className="md:col-span-1 text-lg text-gray-700 dark:text-gray-300 max-w-prose">
-          <p className="mb-0">
-            Elvis served as a U.S. Army soldier and combat veteran before committing his career to public service.
-          </p>
-        </div>
+        <div className="mt-8 grid md:grid-cols-3 gap-8 items-center">
+          <div className="md:col-span-1 text-lg text-gray-700 dark:text-gray-300 max-w-prose">
+            <p className="mb-0">
+              Elvis served as a U.S. Army soldier and combat veteran before committing his career to public service.
+            </p>
+          </div>
 
-        <div className="md:col-span-2">
-          <div className="overflow-hidden rounded-xl">
-            <Image
-              src="/afganistan.jpeg"
-              alt="Elvis serving in Afghanistan"
-              width={1200}
-              height={800}
-              className="w-full h-64 md:h-96 object-cover object-center"
-            />
+          <div className="md:col-span-2">
+            <div className="overflow-hidden rounded-xl">
+              <Image
+                src="/afganistan.jpeg"
+                alt="Elvis serving in Afghanistan"
+                width={1200}
+                height={800}
+                className="w-full h-64 md:h-96 object-cover object-center"
+              />
+            </div>
           </div>
         </div>
       </div>
