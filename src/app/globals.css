@@ -23,11 +23,16 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem; /* 1rem == 15px via html below */
+  line-height: 1.6;
 }
 
 /* Smooth scrolling for in-page anchors */
 html {
   scroll-behavior: smooth;
+  /* Root font-size: lower to modern desktop baseline so rem-based sizes feel
+     less 'large' by default. Set to 14px which is a common modern baseline. */
+  font-size: 14px; /* default 16px -> reduce to 14px (~-12.5%) */
 }
 
 /* Improve focus outlines for keyboard users
@@ -37,4 +42,33 @@ html {
 :focus-visible:not([data-no-focus-ring]) {
   outline: 2px solid rgba(220, 38, 38, 0.8); /* red ring */
   outline-offset: 2px;
+}
+
+/* Heading scale adjustments to keep headings proportional and slightly smaller
+   on the reduced root font-size. These apply to raw h1/h2/h3 elements and
+   complement Tailwind classes where used. */
+h1 {
+  font-size: 2rem; /* ~28px */
+  line-height: 1.15;
+  margin-top: 0;
+  margin-bottom: 0.6em;
+}
+
+h2 {
+  font-size: 1.5rem; /* ~21px */
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.25rem; /* ~17.5px */
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 0.45em;
+}
+
+p {
+  font-size: 1rem; /* 14px */
+  margin-bottom: 1em;
 }
