@@ -19,9 +19,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="canonical" href="https://www.elvisforcongress.com" />
         {/* Favicons: uses the campaign image in /public (png accepted by browsers) */}
-        <link rel="icon" href="/elvis.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/elvis.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/elvis.png" />
+  {/* Prefer SVG favicon (scales well); keep elvis.png as a PNG fallback for older browsers */}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/elvis.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/elvis.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/elvis.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/portrait.jpg" />
         <link rel="manifest" href="/site.webmanifest" />
 
