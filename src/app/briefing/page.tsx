@@ -8,7 +8,7 @@ export default function BriefingPage() {
   return (
     <div className="bg-white dark:bg-gray-950">
       {/* Section 1: Opening */}
-      <section className="max-w-7xl mx-auto px-6 py-16 sm:py-20">
+      <section className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
         <div className="max-w-3xl">
           <h1 className="text-4xl sm:text-5xl font-bold text-campaign-blue dark:text-white mb-8">
             A Serious Campaign for Texas' 31st District
@@ -24,7 +24,7 @@ export default function BriefingPage() {
       </section>
 
       {/* Section 2: Why This Race Is Real */}
-      <section className="max-w-7xl mx-auto px-6 py-16 sm:py-20">
+      <section className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
         <div className="max-w-3xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-campaign-blue dark:text-white mb-8">
             Why This Race Is Real — And Why Now
@@ -45,7 +45,7 @@ export default function BriefingPage() {
       </section>
 
       {/* Section 3: Why I'm Running */}
-      <section className="max-w-7xl mx-auto px-6 py-16 sm:py-20">
+      <section className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
         <div className="max-w-3xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-campaign-blue dark:text-white mb-8">
             Why I'm Running
@@ -66,20 +66,20 @@ export default function BriefingPage() {
       </section>
 
       {/* Section 4: The 90-Day Plan */}
-      <section className="py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto px-6 mb-12">
+      <section className="py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-6 mb-0">
           <h2 className="text-3xl sm:text-4xl font-bold text-campaign-blue dark:text-white mb-4">
             The Next 90 Days
           </h2>
-          <p className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+          <p className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-12">
             This campaign is active, competitive, and built for the reality of a multi-candidate race.
           </p>
         </div>
 
         {/* Phase 1 - Red left, Text right */}
-        <div className="w-full bg-white dark:bg-gray-950 mb-0">
+        <div className="w-full bg-white dark:bg-gray-950">
           <div className="max-w-7xl mx-auto px-6 py-12 sm:py-16 flex flex-col lg:flex-row items-stretch gap-0 lg:gap-8">
-            <div className="flex-1 bg-red-700 dark:bg-red-800 p-8 sm:p-12 rounded-lg lg:rounded-none flex flex-col justify-center order-2 lg:order-1">
+            <div className="flex-1 bg-red-700 dark:bg-red-800 p-8 sm:p-12 lg:rounded-none flex flex-col justify-center order-2 lg:order-1">
               <h3 className="text-2xl font-bold text-white mb-4">Phase 1</h3>
               <p className="text-white font-semibold mb-4">Active Campaign & Consolidation</p>
               <p className="text-red-100 text-sm">Today through mid-January</p>
@@ -148,7 +148,7 @@ export default function BriefingPage() {
                 </p>
               </div>
             </div>
-            <div className="flex-1 bg-campaign-blue dark:bg-sky-900 p-8 sm:p-12 rounded-lg lg:rounded-none flex flex-col justify-center">
+            <div className="flex-1 bg-campaign-blue dark:bg-sky-900 p-8 sm:p-12 lg:rounded-none flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-white mb-4">Phase 2</h3>
               <p className="text-white font-semibold mb-4">Force the Runoff</p>
               <p className="text-sky-100 text-sm">Mid-January → March 3</p>
@@ -159,7 +159,7 @@ export default function BriefingPage() {
         {/* Phase 3 - Red left, Text right */}
         <div className="w-full bg-white dark:bg-gray-950">
           <div className="max-w-7xl mx-auto px-6 py-12 sm:py-16 flex flex-col lg:flex-row items-stretch gap-0 lg:gap-8">
-            <div className="flex-1 bg-red-700 dark:bg-red-800 p-8 sm:p-12 rounded-lg lg:rounded-none flex flex-col justify-center order-2 lg:order-1">
+            <div className="flex-1 bg-red-700 dark:bg-red-800 p-8 sm:p-12 lg:rounded-none flex flex-col justify-center order-2 lg:order-1">
               <h3 className="text-2xl font-bold text-white mb-4">Phase 3</h3>
               <p className="text-white font-semibold mb-4">Win the Runoff</p>
               <p className="text-red-100 text-sm">Post-Primary</p>
@@ -201,7 +201,7 @@ export default function BriefingPage() {
       </section>
 
       {/* Section 5: Why Early Support Matters */}
-      <section className="max-w-7xl mx-auto px-6 py-16 sm:py-20">
+      <section className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
         <div className="max-w-3xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-campaign-blue dark:text-white mb-8">
             Why Early Support Matters
@@ -225,7 +225,7 @@ export default function BriefingPage() {
       </section>
 
       {/* Section 6: The Ask */}
-      <section className="max-w-7xl mx-auto px-6 py-16 sm:py-20">
+      <section className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
         <div className="max-w-3xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-campaign-blue dark:text-white mb-8">
             Support the Campaign
@@ -262,7 +262,7 @@ export default function BriefingPage() {
       </section>
 
       {/* Section 7: Close */}
-      <section className="max-w-7xl mx-auto px-6 py-16 sm:py-20">
+      <section className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
         <div className="max-w-3xl">
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             I appreciate you taking the time to review this briefing. Whether or not you choose to support the campaign financially, I value thoughtful conversations about how we can better serve this district.
