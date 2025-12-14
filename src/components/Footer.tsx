@@ -9,7 +9,7 @@ export default function Footer() {
   // NOTE: I added placeholder social links — replace them with the campaign's
   // actual social profile URLs when available.
   const socials = [
-    { href: "https://x.com/elvisforcongress", label: "X (formerly Twitter)", Icon: X },
+    { href: "https://x.com/elvisfortx31?s=11", label: "X (formerly Twitter)", Icon: X },
     { href: "https://instagram.com/elvisforcongress", label: "Instagram", Icon: Instagram },
     { href: "https://www.facebook.com/share/1G736n9RE9/?mibextid=wwXIfr", label: "Facebook", Icon: Facebook },
     { href: "https://linkedin.com/in/elvisforcongress", label: "LinkedIn", Icon: Linkedin },
