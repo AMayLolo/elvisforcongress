@@ -21,7 +21,7 @@ export default function Hero() {
                 href="/stand"
                 className="px-6 py-3 rounded-md font-semibold bg-red-700 text-white hover:bg-red-800"
               >
-                Where Elvis Stands
+                Where I Stand
               </a>
             </div>
           </div>
