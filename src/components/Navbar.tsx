@@ -65,18 +65,20 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* mobile menu button */}
-        <button
-          type="button"
-          className="md:hidden text-white"
-          aria-label="Toggle menu"
-          aria-expanded={mobileOpen}
-          onClick={() => setMobileOpen((v) => !v)}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-          </svg>
-        </button>
+       {
+  /* mobile menu button */
+}
+<button
+  type="button"
+  className="md:hidden text-white"
+  aria-label="Toggle menu"
+  aria-expanded={mobileOpen ? "true" : "false"}
+  onClick={() => setMobileOpen((v) => !v)}
+>
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+  </svg>
+</button>
 
         <div className="hidden md:flex items-center space-x-8">
           <Link href="/meet-elvis" className="text-white hover:underline">
