@@ -21,7 +21,7 @@ Our obligation to veterans does not end when the uniform comes off. It continues
 
 As a U.S. Army combat veteran, I understand the cost of service and the frustration many veterans face when navigating federal systems that should work better. Veterans deserve responsiveness, transparency, and leadership that takes their concerns seriously.
 
-  I will work to ensure the Department of Veterans Affairs is accountable, veterans receive timely care, and families are treated with the respect they have earned through service.`,
+I will work to ensure the Department of Veterans Affairs is accountable, veterans receive timely care, and families are treated with the respect they have earned through service.`,
     Icon: Star,
   },
   {
@@ -43,7 +43,7 @@ Economic growth should create real jobs, strengthen the local workforce, and kee
     short: "Reduce healthcare and prescription costs, and support working families.",
     details: `Reducing the pressure on working families.
 
-Families across Central Texas are feeling the pressure of rising costs in everydayday life, from groceries and gas to healthcare and housing.
+Families across Central Texas are feeling the pressure of rising costs in everyday life, from groceries and gas to healthcare and housing.
 
 Too often, decisions made in Washington increase costs without fully considering the impact on working families and taxpayers. Lowering costs requires leaders who show up, ask hard questions, and push back on policies that make life more expensive.
 
@@ -164,12 +164,9 @@ export default function IssuesTiles() {
           <div className="mt-4 flex items-center justify-between">
             <button
               type="button"
-          
-              onMouseEnter={() => setActiveId(issue.id)}
-              onMouseLeave={() => setActiveId((id) => (id === issue.id ? null : id))}
+              onClick={() => setActiveId(issue.id)}
               onFocus={() => setActiveId(issue.id)}
               onBlur={() => setActiveId((id) => (id === issue.id ? null : id))}
-              aria-describedby={`issue-tooltip-${issue.id}`}
               className="text-sm text-sky-700 dark:text-sky-300 font-medium"
             >
               Learn more
@@ -191,8 +188,6 @@ export default function IssuesTiles() {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            onMouseEnter={() => setActiveId(activeIssue.id)}
-            onMouseLeave={() => setActiveId((id) => (id === activeIssue.id ? null : id))}
             className="w-full max-w-2xl max-h-[90vh] bg-sky-50/95 dark:bg-sky-900/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden flex flex-col"
           >
             {/* Header */}
