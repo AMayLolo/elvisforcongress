@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import CampaignBanner from "@/components/CampaignBanner";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "next-themes";
 import HomeDonateModal from "@/components/HomeDonateModal";
@@ -19,23 +20,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="canonical" href="https://www.elvisforcongress.com" />
         {/* Favicons: uses the campaign image in /public (png accepted by browsers) */}
-  {/* Prefer SVG favicon (scales well); keep elvis.png as a PNG fallback for older browsers */}
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="/elvis.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/elvis.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/elvis.png" />
+        {/* Prefer SVG favicon (scales well); keep elvis.png as a PNG fallback for older browsers */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/elvis.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/elvis.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/elvis.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/portrait.jpg" />
         <link rel="manifest" href="/site.webmanifest" />
 
         {/* Open Graph / Twitter meta for better discovery and link previews */}
-  <meta property="og:title" content="Elvis Lossa for Congress | District 31" />
+        <meta property="og:title" content="Elvis Lossa for Congress | District 31" />
         <meta property="og:description" content="Elvis is running for U.S. Congress to bring integrity, accountability, and real solutions to District 31." />
         <meta property="og:image" content="https://www.elvisforcongress.com/elvis.png" />
         <meta property="og:url" content="https://www.elvisforcongress.com" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Elvis Lossa for Congress | District 31" />
+        <meta name="twitter:title" content="Elvis Lossa for Congress | District 31" />
         <meta name="twitter:description" content="Elvis is running for U.S. Congress to bring integrity, accountability, and real solutions to District 31." />
         <meta name="twitter:image" content="https://www.elvisforcongress.com/elvis.png" />
 
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <HomeDonateModal />
           <Navbar />
+          <CampaignBanner />
           <main className="min-h-screen bg-white dark:bg-gray-950 transition-colors">
             {children}
           </main>
