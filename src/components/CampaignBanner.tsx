@@ -11,15 +11,15 @@ export default function CampaignBanner() {
       className="block w-full bg-red-700 dark:bg-red-700 hover:bg-red-800 transition"
     >
       <section className="w-full">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
-          <div className="text-white whitespace-nowrap">
-            <h2 className="text-lg font-bold inline">Help me fight for Texas!</h2>
-            <p className="text-base inline ml-2">SUPPORT MY CAMPAIGN</p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-4">
+          <div className="text-white whitespace-normal sm:whitespace-nowrap">
+            <h2 className="text-sm sm:text-lg font-bold inline">Help me fight for Texas!</h2>
+            <p className="text-xs sm:text-base inline ml-1 sm:ml-2">SUPPORT MY CAMPAIGN</p>
           </div>
           <button
             type="button"
             onClick={(e) => e.preventDefault()}
-            className="bg-white text-red-700 font-semibold px-6 py-2 rounded-md hover:bg-gray-100 transition shrink-0 whitespace-nowrap"
+            className="hidden sm:block bg-white text-red-700 font-semibold px-6 py-2 rounded-md hover:bg-gray-100 transition shrink-0 whitespace-nowrap"
           >
             Donate Now
           </button>
