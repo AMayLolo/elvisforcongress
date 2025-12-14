@@ -65,7 +65,7 @@ export default function Navbar() {
           type="button"
           className="md:hidden text-sky-900"
           aria-label="Toggle menu"
-          aria-expanded={mobileOpen ? "true" : "false"}
+          aria-expanded={`${mobileOpen}`}
           onClick={() => setMobileOpen((v) => !v)}
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -93,6 +93,7 @@ export default function Navbar() {
             )}
           </div>
 
+          <Link href="/vote" className="text-sky-900 hover:underline">Voter Resources</Link>
           <Link href="/press" className="text-sky-900 hover:underline">Press</Link>
           <Link href="/contact" className="text-sky-900 hover:underline">Contact</Link>
           <Link href="/volunteer" className="text-sky-900 hover:underline">Volunteer</Link>
@@ -106,6 +107,7 @@ export default function Navbar() {
           <div className="max-w-7xl mx-auto px-6 py-4 space-y-3">
             <Link href="/meet-elvis" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>About</Link>
             <Link href="/stand" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>Where I Stand</Link>
+            <Link href="/vote" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>Voter Resources</Link>
             <Link href="/press" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>Press</Link>
             <Link href="/contact" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>Contact</Link>
             <Link href="/volunteer" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>Volunteer</Link>
