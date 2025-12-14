@@ -11,7 +11,7 @@ export default function CampaignBanner() {
       className="block w-full bg-red-700 dark:bg-red-700 hover:bg-red-800 transition"
     >
       <section className="w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 sm:py-3 flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-4">
           <div className="text-white">
             <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
               <h2 className="text-sm sm:text-lg font-bold">Help me fight for Texas!</h2>
