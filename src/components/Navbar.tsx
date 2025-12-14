@@ -50,11 +50,11 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="w-full bg-sky-800">
+    <nav className="w-full bg-white">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center" aria-label="Elvis for Congress">
           <img
-            src="/logo_main.svg"
+            src="/ELVIS_Primary_Horizontal_FullColor.svg"
             alt="Elvis for Congress"
             className="h-16 w-auto md:h-20 lg:h-24"
             onError={(e) => {
@@ -70,7 +70,7 @@ export default function Navbar() {
 }
 <button
   type="button"
-  className="md:hidden text-white"
+  className="md:hidden text-sky-900"
   aria-label="Toggle menu"
   aria-expanded={mobileOpen ? "true" : "false"}
   onClick={() => setMobileOpen((v) => !v)}
@@ -81,7 +81,7 @@ export default function Navbar() {
 </button>
 
         <div className="hidden md:flex items-center space-x-8">
-          <Link href="/meet-elvis" className="text-white hover:underline">
+          <Link href="/meet-elvis" className="text-sky-900 hover:underline">
             About
           </Link>
 
@@ -91,7 +91,7 @@ export default function Navbar() {
             onMouseEnter={openIssues}
             onMouseLeave={() => scheduleClose()}
           >
-            <Link href="/stand" className="text-white hover:underline inline-flex items-center" onClick={() => setIssuesOpen(false)}>
+            <Link href="/stand" className="text-sky-900 hover:underline inline-flex items-center" onClick={() => setIssuesOpen(false)}>
               Where I Stand
             </Link>
             {issuesOpen && (
@@ -121,15 +121,15 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link href="/press" className="text-white hover:underline">
+          <Link href="/press" className="text-sky-900 hover:underline">
             Press
           </Link>
 
-          <Link href="/contact" className="text-white hover:underline">
+          <Link href="/contact" className="text-sky-900 hover:underline">
             Contact
           </Link>
 
-          <Link href="/volunteer" className="text-white hover:underline">
+          <Link href="/volunteer" className="text-sky-900 hover:underline">
             Volunteer
           </Link>
 
@@ -144,13 +144,13 @@ export default function Navbar() {
 
       {/* Mobile menu: shown only on small screens when toggled */}
       {mobileOpen && (
-        <div className="md:hidden bg-sky-900">
+        <div className="md:hidden bg-white border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-6 py-4 space-y-3">
-            <Link href="/meet-elvis" className="block text-white py-2">About</Link>
-            <Link href="/stand" className="block text-white py-2">Where I Stand</Link>
-            <Link href="/press" className="block text-white py-2">Press</Link>
-            <Link href="/contact" className="block text-white py-2">Contact</Link>
-            <Link href="/volunteer" className="block text-white py-2">Volunteer</Link>
+            <Link href="/meet-elvis" className="block text-sky-900 py-2">About</Link>
+            <Link href="/stand" className="block text-sky-900 py-2">Where I Stand</Link>
+            <Link href="/press" className="block text-sky-900 py-2">Press</Link>
+            <Link href="/contact" className="block text-sky-900 py-2">Contact</Link>
+            <Link href="/volunteer" className="block text-sky-900 py-2">Volunteer</Link>
             <Link href={donateHref} className="block bg-red-700 text-white px-4 py-2 rounded-md font-semibold hover:bg-red-800 text-center">Donate</Link>
           </div>
         </div>
