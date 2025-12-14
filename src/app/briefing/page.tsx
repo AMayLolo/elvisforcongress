@@ -4,77 +4,68 @@ export const metadata = {
     "A transparent overview of why this race is winnable and our 90-day plan for Texas' 31st District.",
 };
 
+import PageHeading from "@/components/PageHeading";
+
 export default function BriefingPage() {
   return (
     <div className="bg-white dark:bg-gray-950">
-      {/* Section 1: Opening */}
-      <section className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl font-bold text-campaign-blue dark:text-white mb-8">
-            A Serious Campaign for Texas' 31st District
-          </h1>
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-            Thank you for taking the time to look more closely at this campaign.
-          </p>
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            This race matters, and I believe donors deserve clarity, transparency, and a realistic plan — not slogans. What follows is a straightforward overview of why this race is winnable and how we are approaching the next 90 days.
-          </p>
-          <div className="mt-8 border-t border-gray-300 dark:border-gray-700 pt-8" />
-        </div>
-      </section>
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="max-w-4xl space-y-10">
+          {/* Section 1: Opening */}
+          <section className="space-y-6">
+            <PageHeading as="h1">A Serious Campaign for Texas' 31st District</PageHeading>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              Thank you for taking the time to look more closely at this campaign.
+            </p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              This race matters, and I believe donors deserve clarity, transparency, and a realistic plan — not slogans. What follows is a straightforward overview of why this race is winnable and how we are approaching the next 90 days.
+            </p>
+          </section>
 
-      {/* Section 2: Why This Race Is Real */}
-      <section className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
-        <div className="max-w-3xl">
-          <h2 className="text-3xl sm:text-4xl font-bold text-campaign-blue dark:text-white mb-8">
-            Why This Race Is Real — And Why Now
-          </h2>
-          <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            <p>
-              Texas' 31st District is at an inflection point. While it remains a conservative district, it is growing rapidly and changing demographically, economically, and generationally. Voters want representation that shows up, understands modern governance, and reflects the community as it exists today — not as it did two decades ago.
-            </p>
-            <p>
-              The incumbent has served honorably for more than 20 years. However, he is now the oldest Republican member of Congress and, in the most recent cycle, missed over 125 votes. His presence in the district has largely been limited to scheduled appearances and photo opportunities rather than sustained engagement.
-            </p>
-            <p>
-              History shows incumbents in Texas are rarely defeated — but when they are, it is because conditions change faster than leadership does. That is where this race stands today.
-            </p>
-          </div>
-          <div className="mt-8 border-t border-gray-300 dark:border-gray-700 pt-8" />
-        </div>
-      </section>
+          {/* Section 2: Why This Race Is Real */}
+          <section className="space-y-6">
+            <PageHeading as="h2">Why This Race Is Real — And Why Now</PageHeading>
+            <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p>
+                Texas' 31st District is at an inflection point. While it remains a conservative district, it is growing rapidly and changing demographically, economically, and generationally. Voters want representation that shows up, understands modern governance, and reflects the community as it exists today — not as it did two decades ago.
+              </p>
+              <p>
+                The incumbent has served honorably for more than 20 years. However, he is now the oldest Republican member of Congress and, in the most recent cycle, missed over 125 votes. His presence in the district has largely been limited to scheduled appearances and photo opportunities rather than sustained engagement.
+              </p>
+              <p>
+                History shows incumbents in Texas are rarely defeated — but when they are, it is because conditions change faster than leadership does. That is where this race stands today.
+              </p>
+            </div>
+          </section>
 
-      {/* Section 3: Why I'm Running */}
-      <section className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
-        <div className="max-w-3xl">
-          <h2 className="text-3xl sm:text-4xl font-bold text-campaign-blue dark:text-white mb-8">
-            Why I'm Running
-          </h2>
-          <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            <p>
-              I am a U.S. Army combat veteran who has served at multiple levels of government, including most recently as Policy Coordinator for the Texas Speaker of the House. I have worked inside institutions, understand how power moves, and know how to turn priorities into outcomes.
-            </p>
-            <p>
-              Texas' 31st District has never been represented in Congress by a veteran, despite being home to one of the largest military communities in the country. That disconnect matters — to veterans, working families, and taxpayers who expect accountability.
-            </p>
-            <p>
-              This campaign is not built on slogans or celebrity. It is built on experience, discipline, and a clear understanding of how to govern effectively in today's environment.
-            </p>
-          </div>
-          <div className="mt-8 border-t border-gray-300 dark:border-gray-700 pt-8" />
-        </div>
-      </section>
+          {/* Section 3: Why I'm Running */}
+          <section className="space-y-6">
+            <PageHeading as="h2">Why I'm Running</PageHeading>
+            <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p>
+                I am a U.S. Army combat veteran who has served at multiple levels of government, including most recently as Policy Coordinator for the Texas Speaker of the House. I have worked inside institutions, understand how power moves, and know how to turn priorities into outcomes.
+              </p>
+              <p>
+                Texas' 31st District has never been represented in Congress by a veteran, despite being home to one of the largest military communities in the country. That disconnect matters — to veterans, working families, and taxpayers who expect accountability.
+              </p>
+              <p>
+                This campaign is not built on slogans or celebrity. It is built on experience, discipline, and a clear understanding of how to govern effectively in today's environment.
+              </p>
+            </div>
+          </section>
 
-      {/* Section 4: The 90-Day Plan */}
-      <section className="py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto px-6 mb-0">
-          <h2 className="text-3xl sm:text-4xl font-bold text-campaign-blue dark:text-white mb-4">
-            The Next 90 Days
-          </h2>
-          <p className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-12">
-            This campaign is active, competitive, and built for the reality of a multi-candidate race.
-          </p>
+          {/* Section 4: The 90-Day Plan */}
+          <section className="space-y-6">
+            <PageHeading as="h2">The Next 90 Days</PageHeading>
+            <p className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+              This campaign is active, competitive, and built for the reality of a multi-candidate race.
+            </p>
+          </section>
         </div>
+      </div>
+
+      {/* Three-phase plan with full-width colored sections */}
+      <section>
 
         {/* Phase 1 - Red left, Text right */}
         <div className="w-full bg-white dark:bg-gray-950">
@@ -200,75 +191,67 @@ export default function BriefingPage() {
         </div>
       </section>
 
-      {/* Section 5: Why Early Support Matters */}
-      <section className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
-        <div className="max-w-3xl">
-          <h2 className="text-3xl sm:text-4xl font-bold text-campaign-blue dark:text-white mb-8">
-            Why Early Support Matters
-          </h2>
-          <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            <p>
-              This campaign does not need its initial supporters to fund the entire race. What we need — and what we are focused on — is raising enough early capital to demonstrate viability.
-            </p>
-            <p>
-              Outside organizations are watching this race closely. They want an alternative. But they will only engage once a campaign proves it can raise, organize, and compete.
-            </p>
-            <p>
-              Early support unlocks that next level.
-            </p>
-            <p className="font-semibold text-campaign-blue dark:text-campaign-blue text-base">
-              "We are not asking you to carry this alone."
-            </p>
-          </div>
-          <div className="mt-8 border-t border-gray-300 dark:border-gray-700 pt-8" />
-        </div>
-      </section>
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="max-w-4xl space-y-10">
+          {/* Section 5: Why Early Support Matters */}
+          <section className="space-y-6">
+            <PageHeading as="h2">Why Early Support Matters</PageHeading>
+            <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p>
+                This campaign does not need its initial supporters to fund the entire race. What we need — and what we are focused on — is raising enough early capital to demonstrate viability.
+              </p>
+              <p>
+                Outside organizations are watching this race closely. They want an alternative. But they will only engage once a campaign proves it can raise, organize, and compete.
+              </p>
+              <p>
+                Early support unlocks that next level.
+              </p>
+              <p className="font-semibold text-campaign-blue dark:text-campaign-blue text-base">
+                "We are not asking you to carry this alone."
+              </p>
+            </div>
+          </section>
 
-      {/* Section 6: The Ask */}
-      <section className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
-        <div className="max-w-3xl">
-          <h2 className="text-3xl sm:text-4xl font-bold text-campaign-blue dark:text-white mb-8">
-            Support the Campaign
-          </h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-            If you believe Texas' 31st District is ready for new leadership — and that this is the moment to make that change — I would be honored to earn your support.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <a
-              href="https://secure.winred.com/elvis-for-congress/donate-hd"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 bg-campaign-red hover:bg-campaign-red-dark text-white font-semibold py-3 px-6 rounded-md text-center transition"
-            >
-              Contribute $3,300
-            </a>
-            <a
-              href="https://secure.winred.com/elvis-for-congress/donate-hd"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 bg-campaign-red hover:bg-campaign-red-dark text-white font-semibold py-3 px-6 rounded-md text-center transition"
-            >
-              Contribute $6,600 (Couples)
-            </a>
-            <a
-              href="/contact"
-              className="flex-1 bg-campaign-blue hover:bg-campaign-blue-dark text-white font-semibold py-3 px-6 rounded-md text-center transition"
-            >
-              Prefer to Talk First?
-            </a>
-          </div>
-          <div className="mt-8 border-t border-gray-300 dark:border-gray-700 pt-8" />
-        </div>
-      </section>
+          {/* Section 6: The Ask */}
+          <section className="space-y-6">
+            <PageHeading as="h2">Support the Campaign</PageHeading>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              If you believe Texas' 31st District is ready for new leadership — and that this is the moment to make that change — I would be honored to earn your support.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://secure.winred.com/elvis-for-congress/donate-hd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 bg-campaign-red hover:bg-campaign-red-dark text-white font-semibold py-3 px-6 rounded-md text-center transition"
+              >
+                Contribute $3,300
+              </a>
+              <a
+                href="https://secure.winred.com/elvis-for-congress/donate-hd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 bg-campaign-red hover:bg-campaign-red-dark text-white font-semibold py-3 px-6 rounded-md text-center transition"
+              >
+                Contribute $6,600 (Couples)
+              </a>
+              <a
+                href="/contact"
+                className="flex-1 bg-campaign-blue hover:bg-campaign-blue-dark text-white font-semibold py-3 px-6 rounded-md text-center transition"
+              >
+                Prefer to Talk First?
+              </a>
+            </div>
+          </section>
 
-      {/* Section 7: Close */}
-      <section className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
-        <div className="max-w-3xl">
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            I appreciate you taking the time to review this briefing. Whether or not you choose to support the campaign financially, I value thoughtful conversations about how we can better serve this district.
-          </p>
+          {/* Section 7: Close */}
+          <section className="space-y-6">
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              I appreciate you taking the time to review this briefing. Whether or not you choose to support the campaign financially, I value thoughtful conversations about how we can better serve this district.
+            </p>
+          </section>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
