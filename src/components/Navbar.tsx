@@ -13,6 +13,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setIssuesOpen(false);
+    setMobileOpen(false);
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
       closeTimeoutRef.current = null;
@@ -47,7 +48,7 @@ export default function Navbar() {
   return (
     <nav className="w-full bg-white">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center" aria-label="Elvis for Congress">
+        <Link href="/" className="flex items-center" aria-label="Elvis for Congress" onClick={() => setMobileOpen(false)}>
           <img
             src="/ELVIS_Primary_Horizontal_FullColor.svg"
             alt="Elvis for Congress"
@@ -103,12 +104,12 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-6 py-4 space-y-3">
-            <Link href="/meet-elvis" className="block text-sky-900 py-2">About</Link>
-            <Link href="/stand" className="block text-sky-900 py-2">Where I Stand</Link>
-            <Link href="/press" className="block text-sky-900 py-2">Press</Link>
-            <Link href="/contact" className="block text-sky-900 py-2">Contact</Link>
-            <Link href="/volunteer" className="block text-sky-900 py-2">Volunteer</Link>
-            <Link href={donateHref} className="block bg-red-700 text-white px-4 py-2 rounded-md font-semibold hover:bg-red-800 text-center">Donate</Link>
+            <Link href="/meet-elvis" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>About</Link>
+            <Link href="/stand" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>Where I Stand</Link>
+            <Link href="/press" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>Press</Link>
+            <Link href="/contact" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>Contact</Link>
+            <Link href="/volunteer" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>Volunteer</Link>
+            <Link href={donateHref} className="block bg-red-700 text-white px-4 py-2 rounded-md font-semibold hover:bg-red-800 text-center" onClick={() => setMobileOpen(false)}>Donate</Link>
           </div>
         </div>
       )}
