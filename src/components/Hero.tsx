@@ -23,13 +23,13 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Portrait on right - stretched to bottom, no box */}
-        <div className="relative h-full">
+        {/* Portrait on right - hidden on mobile, shown on md+ */}
+        <div className="hidden md:block relative h-full">
           <Image
             src="/elvis.png"
             alt="Photo of Elvis"
             fill
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(max-width: 768px) 0vw, 50vw"
             priority
             className="object-cover object-bottom"
           />
