@@ -11,7 +11,7 @@ export default function Footer() {
   const socials = [
     { href: "https://x.com/elvisforcongress", label: "X (formerly Twitter)", Icon: X },
     { href: "https://instagram.com/elvisforcongress", label: "Instagram", Icon: Instagram },
-    { href: "https://facebook.com/elvisforcongress", label: "Facebook", Icon: Facebook },
+    { href: "https://www.facebook.com/share/1G736n9RE9/?mibextid=wwXIfr", label: "Facebook", Icon: Facebook },
     { href: "https://linkedin.com/in/elvisforcongress", label: "LinkedIn", Icon: Linkedin },
   ];
 
