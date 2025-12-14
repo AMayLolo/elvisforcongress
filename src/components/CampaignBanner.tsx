@@ -1,22 +1,30 @@
+"use client";
+
 export default function CampaignBanner() {
   const winredUrl = process.env.NEXT_PUBLIC_WINRED_URL || "https://secure.winred.com/elvis-for-congress/donate-today";
 
   return (
-    <section className="w-full bg-red-700 dark:bg-red-700">
-      <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="text-white">
-          <h2 className="text-2xl sm:text-3xl font-bold">Support my campaign.</h2>
-          <p className="text-lg mt-2">Help me fight for Texas!</p>
+    <a
+      href={winredUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block w-full bg-red-700 dark:bg-red-700 hover:bg-red-800 transition"
+    >
+      <section className="w-full">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+          <div className="text-white whitespace-nowrap">
+            <h2 className="text-lg font-bold inline">Help me fight for Texas!</h2>
+            <p className="text-base inline ml-2">SUPPORT MY CAMPAIGN</p>
+          </div>
+          <button
+            type="button"
+            onClick={(e) => e.preventDefault()}
+            className="bg-white text-red-700 font-semibold px-6 py-2 rounded-md hover:bg-gray-100 transition shrink-0 whitespace-nowrap"
+          >
+            Donate Now
+          </button>
         </div>
-        <a
-          href={winredUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-white text-red-700 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition shrink-0"
-        >
-          Donate Now
-        </a>
-      </div>
-    </section>
+      </section>
+    </a>
   );
 }
