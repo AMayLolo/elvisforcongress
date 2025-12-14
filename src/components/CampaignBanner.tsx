@@ -11,10 +11,10 @@ export default function CampaignBanner() {
       className="block w-full bg-red-700 dark:bg-red-700 hover:bg-red-800 transition"
     >
       <section className="w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-4">
-          <div className="text-white whitespace-normal sm:whitespace-nowrap">
-            <h2 className="text-sm sm:text-lg font-bold inline">Help me fight for Texas!</h2>
-            <p className="text-xs sm:text-base inline ml-1 sm:ml-2">SUPPORT MY CAMPAIGN</p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-4">
+          <div className="text-white">
+            <h2 className="text-sm sm:text-lg font-bold block">Help me fight for Texas!</h2>
+            <p className="text-xs sm:text-base block sm:inline sm:ml-2">SUPPORT MY CAMPAIGN</p>
           </div>
           <button
             type="button"
