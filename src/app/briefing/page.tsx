@@ -79,7 +79,7 @@ export default function BriefingPage() {
         {/* Phase 1 - Red left, Text right */}
         <div className="w-full bg-white dark:bg-gray-950">
           <div className="max-w-7xl mx-auto px-6 py-12 sm:py-16 flex flex-col lg:flex-row items-stretch gap-0 lg:gap-8">
-            <div className="flex-1 bg-red-700 dark:bg-red-800 p-8 sm:p-12 lg:rounded-none flex flex-col justify-center order-2 lg:order-1">
+            <div className="flex-1 bg-campaign-red dark:bg-campaign-red-dark p-8 sm:p-12 lg:rounded-none flex flex-col justify-center order-2 lg:order-1">
               <h3 className="text-2xl font-bold text-white mb-4">Phase 1</h3>
               <p className="text-white font-semibold mb-4">Active Campaign & Consolidation</p>
               <p className="text-red-100 text-sm">Today through mid-January</p>
@@ -87,19 +87,19 @@ export default function BriefingPage() {
             <div className="flex-1 order-1 lg:order-2">
               <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start">
-                  <span className="text-red-700 dark:text-red-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-red dark:text-campaign-red font-bold mr-3">•</span>
                   <span>Full-speed fundraising underway</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-700 dark:text-red-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-red dark:text-campaign-red font-bold mr-3">•</span>
                   <span>District-wide presence and coalition building</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-700 dark:text-red-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-red dark:text-campaign-red font-bold mr-3">•</span>
                   <span>Digital and earned media to introduce and define the race</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-700 dark:text-red-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-red dark:text-campaign-red font-bold mr-3">•</span>
                   <span>Clear contrast between seriousness and spectacle</span>
                 </li>
               </ul>
@@ -122,24 +122,24 @@ export default function BriefingPage() {
             <div className="flex-1">
               <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start">
-                  <span className="text-campaign-blue dark:text-sky-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-blue dark:text-campaign-blue font-bold mr-3">•</span>
                   <span>Sustained voter contact and persuasion</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-campaign-blue dark:text-sky-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-blue dark:text-campaign-blue font-bold mr-3">•</span>
                   <span>Continued fundraising to maintain visibility</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-campaign-blue dark:text-sky-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-blue dark:text-campaign-blue font-bold mr-3">•</span>
                   <span>Clear contrast between experience, discipline, and presence versus absentee representation</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-campaign-blue dark:text-sky-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-blue dark:text-campaign-blue font-bold mr-3">•</span>
                   <span>Engagement with outside groups monitoring the race</span>
                 </li>
               </ul>
               <div className="mt-6 p-4 bg-sky-50 dark:bg-gray-800 rounded-lg border border-sky-200 dark:border-gray-700">
-                <p className="font-semibold text-campaign-blue dark:text-sky-300 mb-2">Objective:</p>
+                <p className="font-semibold text-campaign-blue dark:text-campaign-blue mb-2">Objective:</p>
                 <p className="text-gray-700 dark:text-gray-300">
                   Ensure no candidate clears a majority and position this campaign as one of the top two advancing.
                 </p>
@@ -148,10 +148,10 @@ export default function BriefingPage() {
                 </p>
               </div>
             </div>
-            <div className="flex-1 bg-campaign-blue dark:bg-sky-900 p-8 sm:p-12 lg:rounded-none flex flex-col justify-center">
+            <div className="flex-1 bg-campaign-blue dark:bg-campaign-blue-dark p-8 sm:p-12 lg:rounded-none flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-white mb-4">Phase 2</h3>
               <p className="text-white font-semibold mb-4">Force the Runoff</p>
-              <p className="text-sky-100 text-sm">Mid-January → March 3</p>
+              <p className="text-white text-sm">Mid-January → March 3</p>
             </div>
           </div>
         </div>
@@ -159,32 +159,32 @@ export default function BriefingPage() {
         {/* Phase 3 - Red left, Text right */}
         <div className="w-full bg-white dark:bg-gray-950">
           <div className="max-w-7xl mx-auto px-6 py-12 sm:py-16 flex flex-col lg:flex-row items-stretch gap-0 lg:gap-8">
-            <div className="flex-1 bg-red-700 dark:bg-red-800 p-8 sm:p-12 lg:rounded-none flex flex-col justify-center order-2 lg:order-1">
+            <div className="flex-1 bg-campaign-red dark:bg-campaign-red-dark p-8 sm:p-12 lg:rounded-none flex flex-col justify-center order-2 lg:order-1">
               <h3 className="text-2xl font-bold text-white mb-4">Phase 3</h3>
               <p className="text-white font-semibold mb-4">Win the Runoff</p>
-              <p className="text-red-100 text-sm">Post-Primary</p>
+              <p className="text-white text-sm">Post-Primary</p>
             </div>
             <div className="flex-1 order-1 lg:order-2">
               <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start">
-                  <span className="text-red-700 dark:text-red-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-red dark:text-campaign-red font-bold mr-3">•</span>
                   <span>Expanded coalition support</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-700 dark:text-red-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-red dark:text-campaign-red font-bold mr-3">•</span>
                   <span>Significant outside investment</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-700 dark:text-red-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-red dark:text-campaign-red font-bold mr-3">•</span>
                   <span>Increased media attention and voter engagement</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-700 dark:text-red-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-red dark:text-campaign-red font-bold mr-3">•</span>
                   <span>Head-to-head contrast focused on leadership, accountability, and generational change</span>
                 </li>
               </ul>
               <div className="mt-6 p-4 bg-sky-50 dark:bg-gray-800 rounded-lg border border-sky-200 dark:border-gray-700">
-                <p className="font-semibold text-campaign-blue dark:text-sky-300 mb-2">Objective:</p>
+                <p className="font-semibold text-campaign-blue dark:text-campaign-blue mb-2">Objective:</p>
                 <p className="text-gray-700 dark:text-gray-300">
                   Win a one-on-one race where seriousness, discipline, and turnout matter most.
                 </p>
@@ -216,7 +216,7 @@ export default function BriefingPage() {
             <p>
               Early support unlocks that next level.
             </p>
-            <p className="font-semibold text-campaign-blue dark:text-sky-300 text-base">
+            <p className="font-semibold text-campaign-blue dark:text-campaign-blue text-base">
               "We are not asking you to carry this alone."
             </p>
           </div>
@@ -238,7 +238,7 @@ export default function BriefingPage() {
               href="https://secure.winred.com/elvis-for-congress/donate-hd"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-md text-center transition"
+              className="flex-1 bg-campaign-red hover:bg-campaign-red-dark text-white font-semibold py-3 px-6 rounded-md text-center transition"
             >
               Contribute $3,300
             </a>
@@ -246,13 +246,13 @@ export default function BriefingPage() {
               href="https://secure.winred.com/elvis-for-congress/donate-hd"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-md text-center transition"
+              className="flex-1 bg-campaign-red hover:bg-campaign-red-dark text-white font-semibold py-3 px-6 rounded-md text-center transition"
             >
               Contribute $6,600 (Couples)
             </a>
             <a
               href="/contact"
-              className="flex-1 bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-6 rounded-md text-center transition"
+              className="flex-1 bg-campaign-blue hover:bg-campaign-blue-dark text-white font-semibold py-3 px-6 rounded-md text-center transition"
             >
               Prefer to Talk First?
             </a>
