@@ -28,7 +28,7 @@ As a U.S. Army combat veteran, I understand the cost of service and the frustrat
     id: "economic-growth",
     title: "Economic Growth",
     short: "Cut red tape and expand access to capital for local businesses.",
-    details: `Creating jobs and building infrastructure for the future
+    details: `Creating jobs and building infrastructure for the future.
 
 Central Texas is positioned to lead in the next generation of infrastructure and energy driven growth. That means attracting investment that creates skilled jobs and long term opportunity for local communities.
 
@@ -67,7 +67,7 @@ As someone who has served and worked inside government, I believe public safety 
     id: "accountability",
     title: "Accountability",
     short: "Demand transparency, end waste, and return power to the people.",
-  details: `Oversight, transparency, and leadership that answers to the people
+    details: `Oversight, transparency, and leadership that answers to the people
 
 Accountability is not about politics. It is about results.
 
@@ -76,7 +76,7 @@ Too often, federal agencies operate without meaningful oversight, leaving famili
 I believe accountability means transparency, informed oversight, and leadership that is willing to ask hard questions. That includes understanding how emerging technologies and complex federal systems are shaping decisions, costs, and outcomes for the people we serve.
 
 As a public servant who has worked inside government, I know accountability only works when leaders are engaged, informed, and willing to follow through.`,
-  Icon: ClipboardCheck,
+    Icon: ClipboardCheck,
   },
   {
     id: "education",
@@ -103,14 +103,12 @@ export default function IssuesTiles() {
   useEffect(() => {
     if (!activeIssue) return;
 
-    // store the element that had focus so we can restore when closing
     try {
       lastFocusRef.current = document.activeElement as HTMLElement | null;
     } catch (e) {
       lastFocusRef.current = null;
     }
 
-    // focus the overlay so keyboard users are placed inside
     overlayRef.current?.focus();
 
     const onKey = (e: KeyboardEvent) => {
@@ -122,7 +120,6 @@ export default function IssuesTiles() {
     document.addEventListener("keydown", onKey);
     return () => {
       document.removeEventListener("keydown", onKey);
-      // restore focus to the element that opened the dialog
       try {
         lastFocusRef.current?.focus();
       } catch (e) {
@@ -131,13 +128,11 @@ export default function IssuesTiles() {
     };
   }, [activeIssue]);
 
-  // If the page is loaded/navigated to with a hash like `#veterans`, open that issue.
   useEffect(() => {
     const applyHash = () => {
       try {
         const h = window.location.hash.replace(/^#/, "");
         if (h) {
-          // only set if it matches a known issue id
           const match = ISSUES.find((i) => i.id === h);
           if (match) setActiveId(h);
         }
@@ -146,10 +141,7 @@ export default function IssuesTiles() {
       }
     };
 
-    // apply on mount
     applyHash();
-
-    // respond to hash changes while on the page
     window.addEventListener("hashchange", applyHash);
     return () => window.removeEventListener("hashchange", applyHash);
   }, []);
@@ -182,11 +174,7 @@ export default function IssuesTiles() {
             >
               Learn more
             </button>
-
-            {/* removed external page link per request - popup will show details on hover */}
           </div>
-
-          {/* tile content only; overlays are rendered centrally below */}
         </div>
       ))}
 
@@ -198,23 +186,34 @@ export default function IssuesTiles() {
           aria-labelledby={`issue-title-${activeIssue.id}`}
           tabIndex={-1}
           data-no-focus-ring
-          onMouseEnter={() => setActiveId(activeIssue.id)}
-          onMouseLeave={() => setActiveId((id) => (id === activeIssue.id ? null : id))}
-          className="absolute left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 w-[min(95vw,64rem)] max-w-3xl h-[80vh] sm:h-[60vh] px-6 py-6 bg-sky-50/95 dark:bg-sky-900/80 backdrop-blur-sm rounded-lg shadow-lg text-base text-gray-800 dark:text-gray-200 overflow-hidden focus:outline-none focus:ring-0"
+          onClick={() => setActiveId(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 sm:p-6"
         >
-          <div className="flex items-center justify-between gap-4 h-full">
-            <div className="flex-1">
-              <h3 id={`issue-title-${activeIssue.id}`} className="text-xl font-semibold text-campaign-blue dark:text-white">{activeIssue.title}</h3>
-              <div className="mt-3 flex items-center overflow-auto max-h-[calc(80vh-5rem)] sm:max-h-[calc(60vh-5rem)] whitespace-pre-line text-base text-gray-700 dark:text-gray-200">{activeIssue.details ?? activeIssue.short}</div>
-            </div>
-            <div className="shrink-0 ml-4">
+          <div
+            onClick={(e) => e.stopPropagation()}
+            onMouseEnter={() => setActiveId(activeIssue.id)}
+            onMouseLeave={() => setActiveId((id) => (id === activeIssue.id ? null : id))}
+            className="w-full max-w-2xl max-h-[90vh] bg-sky-50/95 dark:bg-sky-900/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden flex flex-col"
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between gap-4 px-6 py-4 border-b border-sky-200/50 dark:border-sky-700/50 shrink-0">
+              <h3 id={`issue-title-${activeIssue.id}`} className="text-xl font-semibold text-campaign-blue dark:text-white">
+                {activeIssue.title}
+              </h3>
               <button
                 onClick={() => setActiveId(null)}
                 aria-label="Close details"
-                className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-white/70 dark:bg-gray-800/60 text-gray-700 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700"
+                className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-white/70 dark:bg-gray-800/60 text-gray-700 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700 shrink-0"
               >
                 ✕
               </button>
+            </div>
+
+            {/* Scrollable Content */}
+            <div className="flex-1 overflow-y-auto px-6 py-4">
+              <div className="whitespace-pre-line text-base text-gray-700 dark:text-gray-200">
+                {activeIssue.details ?? activeIssue.short}
+              </div>
             </div>
           </div>
         </div>
