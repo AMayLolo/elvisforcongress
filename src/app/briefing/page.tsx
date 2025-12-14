@@ -66,18 +66,20 @@ export default function BriefingPage() {
       </section>
 
       {/* Section 4: The 90-Day Plan */}
-      <section className="max-w-7xl mx-auto px-6 py-16 sm:py-20">
-        <div className="max-w-3xl">
+      <section className="py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-6 mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-campaign-blue dark:text-white mb-4">
             The Next 90 Days
           </h2>
-          <p className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-12">
+          <p className="text-xl font-semibold text-gray-800 dark:text-gray-200">
             This campaign is active, competitive, and built for the reality of a multi-candidate race.
           </p>
+        </div>
 
-          {/* Phase 1 */}
-          <div className="mb-16 flex flex-col lg:flex-row items-stretch gap-8">
-            <div className="flex-1 bg-red-700 dark:bg-red-800 p-8 rounded-lg order-2 lg:order-1 flex flex-col justify-center">
+        {/* Phase 1 - Red left, Text right */}
+        <div className="w-full bg-white dark:bg-gray-950 mb-0">
+          <div className="max-w-7xl mx-auto px-6 py-12 sm:py-16 flex flex-col lg:flex-row items-stretch gap-0 lg:gap-8">
+            <div className="flex-1 bg-red-700 dark:bg-red-800 p-8 sm:p-12 rounded-lg lg:rounded-none flex flex-col justify-center order-2 lg:order-1">
               <h3 className="text-2xl font-bold text-white mb-4">Phase 1</h3>
               <p className="text-white font-semibold mb-4">Active Campaign & Consolidation</p>
               <p className="text-red-100 text-sm">Today through mid-January</p>
@@ -112,25 +114,27 @@ export default function BriefingPage() {
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Phase 2 */}
-          <div className="mb-16 flex flex-col lg:flex-row items-stretch gap-8">
+        {/* Phase 2 - Text left, Blue right */}
+        <div className="w-full bg-white dark:bg-gray-950">
+          <div className="max-w-7xl mx-auto px-6 py-12 sm:py-16 flex flex-col lg:flex-row items-stretch gap-0 lg:gap-8">
             <div className="flex-1">
               <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start">
-                  <span className="text-red-700 dark:text-red-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-blue dark:text-sky-400 font-bold mr-3">•</span>
                   <span>Sustained voter contact and persuasion</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-700 dark:text-red-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-blue dark:text-sky-400 font-bold mr-3">•</span>
                   <span>Continued fundraising to maintain visibility</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-700 dark:text-red-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-blue dark:text-sky-400 font-bold mr-3">•</span>
                   <span>Clear contrast between experience, discipline, and presence versus absentee representation</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-700 dark:text-red-400 font-bold mr-3">•</span>
+                  <span className="text-campaign-blue dark:text-sky-400 font-bold mr-3">•</span>
                   <span>Engagement with outside groups monitoring the race</span>
                 </li>
               </ul>
@@ -144,16 +148,18 @@ export default function BriefingPage() {
                 </p>
               </div>
             </div>
-            <div className="flex-1 bg-red-700 dark:bg-red-800 p-8 rounded-lg flex flex-col justify-center">
+            <div className="flex-1 bg-campaign-blue dark:bg-sky-900 p-8 sm:p-12 rounded-lg lg:rounded-none flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-white mb-4">Phase 2</h3>
               <p className="text-white font-semibold mb-4">Force the Runoff</p>
-              <p className="text-red-100 text-sm">Mid-January → March 3</p>
+              <p className="text-sky-100 text-sm">Mid-January → March 3</p>
             </div>
           </div>
+        </div>
 
-          {/* Phase 3 */}
-          <div className="flex flex-col lg:flex-row items-stretch gap-8">
-            <div className="flex-1 bg-red-700 dark:bg-red-800 p-8 rounded-lg order-2 lg:order-1 flex flex-col justify-center">
+        {/* Phase 3 - Red left, Text right */}
+        <div className="w-full bg-white dark:bg-gray-950">
+          <div className="max-w-7xl mx-auto px-6 py-12 sm:py-16 flex flex-col lg:flex-row items-stretch gap-0 lg:gap-8">
+            <div className="flex-1 bg-red-700 dark:bg-red-800 p-8 sm:p-12 rounded-lg lg:rounded-none flex flex-col justify-center order-2 lg:order-1">
               <h3 className="text-2xl font-bold text-white mb-4">Phase 3</h3>
               <p className="text-white font-semibold mb-4">Win the Runoff</p>
               <p className="text-red-100 text-sm">Post-Primary</p>
@@ -191,8 +197,6 @@ export default function BriefingPage() {
               </p>
             </div>
           </div>
-
-          <div className="mt-12 border-t border-gray-300 dark:border-gray-700 pt-8" />
         </div>
       </section>
 
