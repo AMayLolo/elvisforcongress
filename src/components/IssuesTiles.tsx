@@ -15,7 +15,7 @@ const ISSUES = [
     id: "veterans",
     title: "Veterans",
     short: "Ensure veterans receive the healthcare and benefits they deserve.",
-    details: `Accountability, access, and respect for those who served
+    details: `Accountability, access, and respect for those who served.
 
 Our obligation to veterans does not end when the uniform comes off. It continues through access to timely care, earned benefits, and real accountability within the system.
 
@@ -41,7 +41,7 @@ Economic growth should create real jobs, strengthen the local workforce, and kee
     id: "lowering-costs",
     title: "Lowering Costs",
     short: "Reduce healthcare and prescription costs, and support working families.",
-    details: `Reducing the pressure on working families
+    details: `Reducing the pressure on working families.
 
 Families across Central Texas are feeling the pressure of rising costs in everydayday life, from groceries and gas to healthcare and housing.
 
@@ -54,7 +54,7 @@ I believe Congress should focus on responsible decision making that respects tax
     id: "public-safety",
     title: "Public Safety",
     short: "Support first responders and invest in prevention and mental health.",
-    details: `Keeping our communities safe and strong
+    details: `Keeping our communities safe and strong.
 
 Public safety is one of the reasons families choose to live and raise their children in Central Texas. Safe neighborhoods do not happen by accident. They are built through responsibility, presence, and respect for the people who protect our communities.
 
@@ -67,7 +67,7 @@ As someone who has served and worked inside government, I believe public safety 
     id: "accountability",
     title: "Accountability",
     short: "Demand transparency, end waste, and return power to the people.",
-    details: `Oversight, transparency, and leadership that answers to the people
+    details: `Oversight, transparency, and leadership that answers to the people.
 
 Accountability is not about politics. It is about results.
 
@@ -82,7 +82,7 @@ As a public servant who has worked inside government, I know accountability only
     id: "education",
     title: "Education",
     short: "Prepare students with strong funding and modern workforce training.",
-    details: `Preparing students for the future
+    details: `Preparing students for the future.
 
 Education should prepare students with strong fundamentals and the skills they need to succeed in college, the workforce, or military service.
 
@@ -164,7 +164,7 @@ export default function IssuesTiles() {
           <div className="mt-4 flex items-center justify-between">
             <button
               type="button"
-              onClick={() => setActiveId(issue.id)}
+          
               onMouseEnter={() => setActiveId(issue.id)}
               onMouseLeave={() => setActiveId((id) => (id === issue.id ? null : id))}
               onFocus={() => setActiveId(issue.id)}
