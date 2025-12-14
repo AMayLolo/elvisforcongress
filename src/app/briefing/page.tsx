@@ -71,7 +71,7 @@ export default function BriefingPage() {
           <h2 className="text-3xl sm:text-4xl font-bold text-campaign-blue dark:text-white mb-4">
             The Next 90 Days
           </h2>
-          <p className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-12">
+          <p className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-12">
             This campaign is active, competitive, and built for the reality of a multi-candidate race.
           </p>
         </div>
