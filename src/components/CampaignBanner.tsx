@@ -13,8 +13,10 @@ export default function CampaignBanner() {
       <section className="w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-4">
           <div className="text-white">
-            <h2 className="text-sm sm:text-lg font-bold block">Help me fight for Texas!</h2>
-            <p className="text-xs sm:text-base block sm:inline sm:ml-2">SUPPORT MY CAMPAIGN</p>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+              <h2 className="text-sm sm:text-lg font-bold">Help me fight for Texas!</h2>
+              <p className="text-xs sm:text-base">SUPPORT MY CAMPAIGN</p>
+            </div>
           </div>
           <button
             type="button"
