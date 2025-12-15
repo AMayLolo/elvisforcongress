@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { useState } from "react";
 
@@ -19,7 +21,6 @@ export default function Navbar() {
           onClick={() => setIsOpen((v) => !v)}
         >
           <span className="sr-only">Toggle navigation</span>
-          {/* icon */}
           <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current">
             <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" />
           </svg>
@@ -27,9 +28,7 @@ export default function Navbar() {
 
         <nav
           id="primary-nav"
-          className={`${
-            isOpen ? "block" : "hidden"
-          } md:block`}
+          className={`${isOpen ? "block" : "hidden"} md:block`}
           aria-label="Primary"
         >
           <ul className="md:flex md:items-center md:gap-6">
