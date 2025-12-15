@@ -1,74 +1,32 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* Light mode (default) */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Dark mode via next-themes (.dark class on <html>) */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #e5e7eb; /* gray-200 */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem; /* 1rem == 15px via html below */
-  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth scrolling for in-page anchors */
-html {
-  scroll-behavior: smooth;
-  /* Root font-size: choose a middle baseline so rem-based sizes feel balanced.
-    Increase slightly from 14px to 15px to land between the previous sizes. */
-  font-size: 15px; /* default 16px -> 15px (approx -6.25%) */
-}
-
-/* Improve focus outlines for keyboard users
-   Use :focus-visible so mouse clicks don't show the ring, and allow
-   elements to opt-out by adding the attribute `data-no-focus-ring`.
-*/
+/* Accessibility: better focus ring */
 :focus-visible:not([data-no-focus-ring]) {
-  outline: 2px solid rgba(220, 38, 38, 0.8); /* red ring */
+  outline: 2px solid rgba(220, 38, 38, 0.8); /* red-600 */
   outline-offset: 2px;
-}
-
-/* Heading scale adjustments to keep headings proportional and slightly smaller
-   on the reduced root font-size. These apply to raw h1/h2/h3 elements and
-   complement Tailwind classes where used. */
-h1 {
-  font-size: 2rem; /* ~30px */
-  line-height: 1.15;
-  margin-top: 0;
-  margin-bottom: 0.6em;
-}
-
-h2 {
-  font-size: 1.5rem; /* ~22.5px */
-  line-height: 1.2;
-  margin-top: 0;
-  margin-bottom: 0.5em;
-}
-
-h3 {
-  font-size: 1.25rem; /* ~18.75px */
-  line-height: 1.25;
-  margin-top: 0;
-  margin-bottom: 0.45em;
-}
-
-p {
-  font-size: 1rem; /* 15px */
-  margin-bottom: 1em;
 }
