@@ -1,13 +1,36 @@
 export const metadata = {
-  title: "Campaign Briefing | Elvis for Congress",
+  title: "Briefing",
   description:
-    "A transparent overview of why this race is winnable and our 90-day plan for Texas' 31st District.",
+    "Why this race is winnable and our focused 90-day plan for Texas' 31st District.",
+  openGraph: {
+    type: "article",
+    url: "https://www.elvisforcongress.com/briefing",
+    title: "Elvis for Congress | Briefing",
+    description:
+      "Why this race is winnable and our focused 90-day plan for Texas' 31st District.",
+    images: [
+      {
+        url: "/og-logo.jpg", // 1200x630 JPG/PNG in /public
+        width: 1200,
+        height: 630,
+        alt: "Elvis for Congress",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Elvis for Congress | Briefing",
+    description:
+      "Why this race is winnable and our focused 90-day plan for Texas' 31st District.",
+    images: ["/og-logo.jpg"],
+  },
+  alternates: { canonical: "/briefing" },
 };
 
 export default function BriefingPage() {
   return (
     <div className="bg-white dark:bg-gray-950">
-      {/* Section 1: Opening (full-width, tighter spacing) */}
+      {/* Opening */}
       <section className="w-full px-4 sm:px-6 py-8 sm:py-10">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-5xl">
@@ -27,7 +50,7 @@ export default function BriefingPage() {
         </div>
       </section>
 
-      {/* Section 2: Why This Race Is Real (full-width, tighter spacing) */}
+      {/* Why This Race Is Real */}
       <section className="w-full px-4 sm:px-6 py-8 sm:py-10">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-5xl">
@@ -50,30 +73,7 @@ export default function BriefingPage() {
         </div>
       </section>
 
-      {/* Section 3: Why I'm Running (full-width, tighter spacing) */}
-      <section className="w-full px-4 sm:px-6 py-8 sm:py-10">
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-5xl">
-            <h2 className="text-2xl sm:text-3xl font-bold text-campaign-blue dark:text-white mb-4">
-              Why I'm Running
-            </h2>
-            <div className="space-y-3 text-base sm:text-lg text-gray-700 dark:text-gray-300">
-              <p>
-                I am a U.S. Army combat veteran who has served at multiple levels of government, including most recently as Policy Coordinator for the Texas Speaker of the House. I have worked inside institutions, understand how power moves, and know how to turn priorities into outcomes.
-              </p>
-              <p>
-                Texas' 31st District has never been represented in Congress by a veteran, despite being home to one of the largest military communities in the country. That disconnect matters — to veterans, working families, and taxpayers who expect accountability.
-              </p>
-              <p>
-                This campaign is not built on slogans or celebrity. It is built on experience, discipline, and a clear understanding of how to govern effectively in today's environment.
-              </p>
-            </div>
-            <div className="mt-6 border-t border-gray-200 dark:border-gray-800" />
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4: The 90-Day Plan (color blocks already full-width, spacing tightened) */}
+      {/* The Next 90 Days */}
       <section className="w-full py-8 sm:py-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 mb-0">
           <h2 className="text-2xl sm:text-3xl font-bold text-campaign-blue dark:text-white mb-3">
@@ -117,7 +117,7 @@ export default function BriefingPage() {
                   Establish this campaign as the credible alternative in the field and consolidate voters looking for real leadership.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 italic text-sm mt-2">
-                  
+                  "You are not early — you are on time."
                 </p>
               </div>
             </div>
@@ -152,7 +152,7 @@ export default function BriefingPage() {
                   Ensure no candidate clears a majority and position this campaign as one of the top two advancing.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 italic text-sm mt-2">
-                  
+                  "There is a math-based path forward."
                 </p>
               </div>
             </div>
@@ -208,7 +208,7 @@ export default function BriefingPage() {
         </div>
       </section>
 
-      {/* Section 5: Why Early Support Matters (full-width, tighter spacing) */}
+      {/* Why Early Support Matters */}
       <section className="w-full px-4 sm:px-6 py-8 sm:py-10">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-5xl">
@@ -224,7 +224,7 @@ export default function BriefingPage() {
               </p>
               <p>Early support unlocks that next level.</p>
               <p className="font-semibold text-campaign-blue dark:text-campaign-blue text-sm sm:text-base">
-                
+                "We are not asking you to carry this alone."
               </p>
             </div>
             <div className="mt-6 border-t border-gray-200 dark:border-gray-800" />
@@ -232,7 +232,7 @@ export default function BriefingPage() {
         </div>
       </section>
 
-      {/* Section 6: The Ask (full-width, tighter spacing) */}
+      {/* Support the Campaign */}
       <section className="w-full px-4 sm:px-6 py-8 sm:py-10">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-5xl">
@@ -271,7 +271,7 @@ export default function BriefingPage() {
         </div>
       </section>
 
-      {/* Section 7: Close (full-width, tighter spacing) */}
+      {/* Close */}
       <section className="w-full px-4 sm:px-6 py-8 sm:py-10">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-5xl">
