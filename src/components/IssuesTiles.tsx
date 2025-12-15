@@ -105,16 +105,14 @@ export default function IssuesTiles() {
 
     try {
       lastFocusRef.current = document.activeElement as HTMLElement | null;
-    } catch (e) {
+    } catch {
       lastFocusRef.current = null;
     }
 
     overlayRef.current?.focus();
 
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setActiveId(null);
-      }
+      if (e.key === "Escape") setActiveId(null);
     };
 
     document.addEventListener("keydown", onKey);
@@ -122,7 +120,7 @@ export default function IssuesTiles() {
       document.removeEventListener("keydown", onKey);
       try {
         lastFocusRef.current?.focus();
-      } catch (e) {
+      } catch {
         /* ignore focus restore errors */
       }
     };
@@ -136,7 +134,7 @@ export default function IssuesTiles() {
           const match = ISSUES.find((i) => i.id === h);
           if (match) setActiveId(h);
         }
-      } catch (e) {
+      } catch {
         /* ignore */
       }
     };
@@ -148,70 +146,72 @@ export default function IssuesTiles() {
 
   // Center the tile grid while leaving surrounding text/layout untouched
   return (
-    <div className="relative max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mb-10">
-      {ISSUES.map((issue) => (
-        <div
-          key={issue.id}
-          className="relative block text-left bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 hover:shadow-lg transform hover:-translate-y-1 transition focus:outline-none focus:ring-0"
-        >
-          <div className="flex items-start space-x-3">
-            <issue.Icon className="h-6 w-6 text-campaign-blue dark:text-white shrink-0" />
-            <div>
-              <h3 className="text-xl font-semibold text-campaign-blue dark:text-white">{issue.title}</h3>
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{issue.short}</p>
-            </div>
-          </div>
-
-          <div className="mt-4 flex items-center justify-between">
-            <button
-              type="button"
-              onClick={() => setActiveId(issue.id)}
-              onFocus={() => setActiveId(issue.id)}
-              onBlur={() => setActiveId((id) => (id === issue.id ? null : id))}
-              className="text-sm text-sky-700 dark:text-sky-300 font-medium"
-            >
-              Learn more
-            </button>
-          </div>
-        </div>
-      ))}
-
-      {activeIssue && (
-        <div
-          ref={overlayRef}
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby={`issue-title-${activeIssue.id}`}
-          tabIndex={-1}
-          data-no-focus-ring
-          onClick={() => setActiveId(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 sm:p-6"
-        >
+    <div className="w-full flex justify-center">
+      <div className="relative max-w-5xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mb-10 px-4">
+        {ISSUES.map((issue) => (
           <div
-            onClick={(e) => e.stopPropagation()}
-            className="w-full max-w-2xl max-h-[90vh] bg-sky-50/95 dark:bg-sky-900/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden flex flex-col"
+            key={issue.id}
+            className="relative block text-left bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 hover:shadow-lg transform hover:-translate-y-1 transition focus:outline-none focus:ring-0"
           >
-            <div className="flex items-center justify-between gap-4 px-6 py-4 border-b border-sky-200/50 dark:border-sky-700/50 shrink-0">
-              <h3 id={`issue-title-${activeIssue.id}`} className="text-xl font-semibold text-campaign-blue dark:text-white">
-                {activeIssue.title}
-              </h3>
+            <div className="flex items-start space-x-3">
+              <issue.Icon className="h-6 w-6 text-campaign-blue dark:text-white shrink-0" />
+              <div>
+                <h3 className="text-xl font-semibold text-campaign-blue dark:text-white">{issue.title}</h3>
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{issue.short}</p>
+              </div>
+            </div>
+
+            <div className="mt-4 flex items-center justify-between">
               <button
-                onClick={() => setActiveId(null)}
-                aria-label="Close details"
-                className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-white/70 dark:bg-gray-800/60 text-gray-700 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700 shrink-0"
+                type="button"
+                onClick={() => setActiveId(issue.id)}
+                onFocus={() => setActiveId(issue.id)}
+                onBlur={() => setActiveId((id) => (id === issue.id ? null : id))}
+                className="text-sm text-sky-700 dark:text-sky-300 font-medium"
               >
-                ✕
+                Learn more
               </button>
             </div>
+          </div>
+        ))}
 
-            <div className="flex-1 overflow-y-auto px-6 py-4">
-              <div className="whitespace-pre-line text-base text-gray-700 dark:text-gray-200">
-                {activeIssue.details ?? activeIssue.short}
+        {activeIssue && (
+          <div
+            ref={overlayRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby={`issue-title-${activeIssue.id}`}
+            tabIndex={-1}
+            data-no-focus-ring
+            onClick={() => setActiveId(null)}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 sm:p-6"
+          >
+            <div
+              onClick={(e) => e.stopPropagation()}
+              className="w-full max-w-2xl max-h-[90vh] bg-sky-50/95 dark:bg-sky-900/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden flex flex-col"
+            >
+              <div className="flex items-center justify-between gap-4 px-6 py-4 border-b border-sky-200/50 dark:border-sky-700/50 shrink-0">
+                <h3 id={`issue-title-${activeIssue.id}`} className="text-xl font-semibold text-campaign-blue dark:text-white">
+                  {activeIssue.title}
+                </h3>
+                <button
+                  onClick={() => setActiveId(null)}
+                  aria-label="Close details"
+                  className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-white/70 dark:bg-gray-800/60 text-gray-700 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700 shrink-0"
+                >
+                  ✕
+                </button>
+              </div>
+
+              <div className="flex-1 overflow-y-auto px-6 py-4">
+                <div className="whitespace-pre-line text-base text-gray-700 dark:text-gray-200">
+                  {activeIssue.details ?? activeIssue.short}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
