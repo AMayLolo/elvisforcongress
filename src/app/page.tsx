@@ -37,8 +37,8 @@ export default function Home() {
       {/* Two-line heading directly under the Hero with requested casing */}
       <section className="max-w-7xl mx-auto px-6 pt-6">
         <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-campaign-blue dark:text-white">
-          Serious leadership.<br />
-          Real accountability.
+          <span className="block">Serious leadership.</span>
+          <span className="block">Real accountability.</span>
         </h1>
       </section>
 
