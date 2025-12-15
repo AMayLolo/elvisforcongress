@@ -1,9 +1,18 @@
 "use client";
 
+function normalizeWinRed(url: string) {
+  try {
+    const u = new URL(url);
+    if (u.hostname === "www.secure.winred.com") u.hostname = "secure.winred.com";
+    return u.toString();
+  } catch {
+    return "https://secure.winred.com/elvis-for-congress/donate-hd";
+  }
+}
+
 export default function CampaignBanner() {
-  const winredUrl =
-    process.env.NEXT_PUBLIC_WINRED_URL ||
-    "https://secure.winred.com/elvis-for-congress/donate-hd";
+  const raw = process.env.NEXT_PUBLIC_WINRED_URL || "https://secure.winred.com/elvis-for-congress/donate-hd";
+  const winredUrl = normalizeWinRed(raw);
 
   return (
     <a
