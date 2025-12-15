@@ -1,4 +1,5 @@
 export const metadata = {
+  metadataBase: new URL("https://www.elvisforcongress.com"),
   title: "Elvis Lossa for Congress | District 31",
   description:
     "Join Elvis Lossa's campaign to bring commonsense leadership and economic opportunity to District 31. Volunteer, donate, or learn where he stands.",
@@ -8,12 +9,8 @@ export const metadata = {
       "Join Elvis Lossa's campaign to bring commonsense leadership and economic opportunity to District 31. Volunteer, donate, or learn where he stands.",
     url: "https://www.elvisforcongress.com/",
     images: [
-      {
-        url: "https://www.elvisforcongress.com/og-briefing-composite-v3.png",
-        width: 1200,
-        height: 630,
-        alt: "Elvis for Congress",
-      },
+      { url: "/og-briefing-composite-v2.png", width: 1200, height: 630, alt: "Elvis for Congress" },
+      { url: "/ELVIS_Primary_Horizontal_FullColor.png", width: 1200, height: 630, alt: "Elvis for Congress" },
     ],
   },
   twitter: {
