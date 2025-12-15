@@ -1,7 +1,7 @@
 "use client";
 
 export default function CampaignBanner() {
-  const winredUrl = process.env.NEXT_PUBLIC_WINRED_URL || "https://secure.winred.com/elvis-for-congress/donate-today";
+  const winredUrl = process.env.NEXT_PUBLIC_WINRED_URL || "https://secure.winred.com/elvis-for-congress/donate-hd";
 
   return (
     <a
