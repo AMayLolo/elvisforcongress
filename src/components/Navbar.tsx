@@ -1,120 +1,53 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 export default function Navbar() {
-  const pathname = usePathname();
-  const [issuesOpen, setIssuesOpen] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const closeTimeoutRef = useRef<number | null>(null);
-  const donateHref = "/donate";
-
-  useEffect(() => {
-    setIssuesOpen(false);
-    setMobileOpen(false);
-    if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current);
-      closeTimeoutRef.current = null;
-    }
-  }, [pathname]);
-
-  const openIssues = () => {
-    if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current);
-      closeTimeoutRef.current = null;
-    }
-    setIssuesOpen(true);
-  };
-
-  const scheduleClose = (delay = 220) => {
-    if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
-    closeTimeoutRef.current = window.setTimeout(() => {
-      setIssuesOpen(false);
-      closeTimeoutRef.current = null;
-    }, delay);
-  };
-
-  useEffect(() => {
-    return () => {
-      if (closeTimeoutRef.current) {
-        clearTimeout(closeTimeoutRef.current);
-        closeTimeoutRef.current = null;
-      }
-    };
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center" aria-label="Elvis for Congress" onClick={() => setMobileOpen(false)}>
-          <img
-            src="/ELVIS_Primary_Horizontal_FullColor.svg"
-            alt="Elvis for Congress"
-            className="h-20 w-auto md:h-24 lg:h-28"
-            onError={(e) => {
-              const img = e.currentTarget as HTMLImageElement;
-              img.onerror = null;
-              img.src = "/elvis.png";
-            }}
-          />
+    <header className="w-full bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+        <Link href="/" className="font-bold text-campaign-blue dark:text-white">
+          Elvis for Congress
         </Link>
 
         <button
           type="button"
-          className="md:hidden text-sky-900"
-          aria-label="Toggle menu"
-          aria-expanded={`${mobileOpen}`}
-          onClick={() => setMobileOpen((v) => !v)}
+          aria-expanded={isOpen ? "true" : "false"}
+          aria-controls="primary-nav"
+          className="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
+          onClick={() => setIsOpen((v) => !v)}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+          <span className="sr-only">Toggle navigation</span>
+          {/* icon */}
+          <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current">
+            <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" />
           </svg>
         </button>
 
-        <div className="hidden md:flex items-center space-x-8">
-          <Link href="/meet-elvis" className="text-sky-900 hover:underline">About</Link>
-
-          <div className="relative" onMouseEnter={openIssues} onMouseLeave={() => scheduleClose()}>
-            <Link href="/stand" className="text-sky-900 hover:underline inline-flex items-center" onClick={() => setIssuesOpen(false)}>
-              Where I Stand
-            </Link>
-            {issuesOpen && (
-              <div className="absolute z-50 mt-2 right-0 w-56 bg-white text-sky-900 rounded-md shadow-lg ring-1 ring-black/10" onMouseEnter={openIssues} onMouseLeave={() => scheduleClose()}>
-                <ul className="py-2">
-                  <li><Link href="/stand#veterans" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Veterans</Link></li>
-                  <li><Link href="/stand#lowering-costs" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Lowering Costs</Link></li>
-                  <li><Link href="/stand#public-safety" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Public Safety</Link></li>
-                  <li><Link href="/stand#education" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Education & Workforce</Link></li>
-                  <li><Link href="/stand#economic-growth" className="block px-4 py-2 hover:bg-sky-50" onClick={() => setIssuesOpen(false)}>Economic Growth</Link></li>
-                </ul>
-              </div>
-            )}
-          </div>
-
-          <Link href="/vote" className="text-sky-900 hover:underline">Voter Resources</Link>
-          <Link href="/press" className="text-sky-900 hover:underline">Press</Link>
-          <Link href="/contact" className="text-sky-900 hover:underline">Contact</Link>
-          <Link href="/volunteer" className="text-sky-900 hover:underline">Volunteer</Link>
-
-          <Link href={donateHref} className="bg-red-700 text-white px-4 py-2 rounded-md font-semibold hover:bg-red-800">Donate</Link>
-        </div>
+        <nav
+          id="primary-nav"
+          className={`${
+            isOpen ? "block" : "hidden"
+          } md:block`}
+          aria-label="Primary"
+        >
+          <ul className="md:flex md:items-center md:gap-6">
+            <li><Link href="/briefing" className="hover:underline">Briefing</Link></li>
+            <li><Link href="/meet-elvis" className="hover:underline">Meet Elvis</Link></li>
+            <li><Link href="/issues" className="hover:underline">Issues</Link></li>
+            <li><Link href="/contact" className="hover:underline">Contact</Link></li>
+            <li>
+              <Link
+                href="/donate"
+                className="inline-block bg-campaign-red dark:bg-campaign-red-dark text-white font-semibold px-3 py-2 rounded-md hover:brightness-110"
+              >
+                Donate
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
-
-      {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
-          <div className="max-w-7xl mx-auto px-6 py-4 space-y-3">
-            <Link href="/meet-elvis" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>About</Link>
-            <Link href="/stand" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>Where I Stand</Link>
-            <Link href="/vote" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>Voter Resources</Link>
-            <Link href="/press" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>Press</Link>
-            <Link href="/contact" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>Contact</Link>
-            <Link href="/volunteer" className="block text-sky-900 py-2" onClick={() => setMobileOpen(false)}>Volunteer</Link>
-            <Link href={donateHref} className="block bg-red-700 text-white px-4 py-2 rounded-md font-semibold hover:bg-red-800 text-center" onClick={() => setMobileOpen(false)}>Donate</Link>
-          </div>
-        </div>
-      )}
-    </nav>
+    </header>
   );
 }

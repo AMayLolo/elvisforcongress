@@ -1,7 +1,13 @@
+/* postcss */
+/* If VS Code flags @tailwind as unknown, set language mode to PostCSS or disable css.validate */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Example: avoid inline styles, use utility classes. Add any global tweaks here. */
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --campaign-blue: #173657;
   --campaign-blue-dark: #0f2440;
