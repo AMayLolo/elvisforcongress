@@ -2,31 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Light mode (default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --campaign-blue: #173657;
+  --campaign-blue-dark: #0f2440;
+  --campaign-red: #CE1F36;
+  --campaign-red-dark: #ad162a;
 }
-
-/* Dark mode via next-themes (.dark class on <html>) */
 .dark {
-  --background: #0a0a0a;
-  --foreground: #e5e7eb; /* gray-200 */
+  --campaign-blue: #173657;
+  --campaign-blue-dark: #0f2440;
+  --campaign-red: #CE1F36;
+  --campaign-red-dark: #ad162a;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Accessibility: better focus ring */
-:focus-visible:not([data-no-focus-ring]) {
-  outline: 2px solid rgba(220, 38, 38, 0.8); /* red-600 */
-  outline-offset: 2px;
-}
+/* utilities */
+.campaign-text-blue { color: var(--campaign-blue); }
+.campaign-bg-blue { background-color: var(--campaign-blue); }
+.campaign-bg-blue-dark { background-color: var(--campaign-blue-dark); }
+.campaign-bg-red { background-color: var(--campaign-red); }
+.campaign-bg-red-dark { background-color: var(--campaign-red-dark); }
