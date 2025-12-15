@@ -10,7 +10,6 @@ export const metadata = {
     url: "https://www.elvisforcongress.com/",
     images: [
       { url: "/og-briefing-composite-v2.png", width: 1200, height: 630, alt: "Elvis for Congress" },
-      { url: "/ELVIS_Primary_Horizontal_FullColor.png", width: 1200, height: 630, alt: "Elvis for Congress" },
     ],
   },
   twitter: {
