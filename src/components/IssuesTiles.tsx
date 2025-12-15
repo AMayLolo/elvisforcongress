@@ -146,8 +146,9 @@ export default function IssuesTiles() {
     return () => window.removeEventListener("hashchange", applyHash);
   }, []);
 
+  // Center the tile grid while leaving surrounding text/layout untouched
   return (
-    <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mb-10">
+    <div className="relative max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mb-10">
       {ISSUES.map((issue) => (
         <div
           key={issue.id}
@@ -190,7 +191,6 @@ export default function IssuesTiles() {
             onClick={(e) => e.stopPropagation()}
             className="w-full max-w-2xl max-h-[90vh] bg-sky-50/95 dark:bg-sky-900/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden flex flex-col"
           >
-            {/* Header */}
             <div className="flex items-center justify-between gap-4 px-6 py-4 border-b border-sky-200/50 dark:border-sky-700/50 shrink-0">
               <h3 id={`issue-title-${activeIssue.id}`} className="text-xl font-semibold text-campaign-blue dark:text-white">
                 {activeIssue.title}
@@ -204,7 +204,6 @@ export default function IssuesTiles() {
               </button>
             </div>
 
-            {/* Scrollable Content */}
             <div className="flex-1 overflow-y-auto px-6 py-4">
               <div className="whitespace-pre-line text-base text-gray-700 dark:text-gray-200">
                 {activeIssue.details ?? activeIssue.short}
