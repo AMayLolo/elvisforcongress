@@ -23,8 +23,18 @@ export const metadata = {
     description:
       "Integrity, accountability, and real solutions for Texas' 31st District.",
     images: [
-      { url: "/og-briefing-composite.png", width: 1200, height: 630, alt: "Elvis for Congress" },
-      { url: "/ELVIS_Primary_Horizontal_FullColor.png", width: 1200, height: 630, alt: "Elvis for Congress" },
+      {
+        url: "/og-briefing-composite-v2.png", // primary OG image (1200x630, white background, single logo)
+        width: 1200,
+        height: 630,
+        alt: "Elvis for Congress",
+      },
+      {
+        url: "/ELVIS_Primary_Horizontal_FullColor.png", // fallback logo (PNG)
+        width: 1200,
+        height: 630,
+        alt: "Elvis for Congress",
+      },
     ],
   },
   twitter: {
@@ -32,7 +42,7 @@ export const metadata = {
     title: "Elvis for Congress",
     description:
       "Integrity, accountability, and real solutions for Texas' 31st District.",
-    images: ["/og-briefing-composite.png"],
+    images: ["/og-briefing-composite-v3.png"], // Twitter uses PNG/JPG
   },
 };
 
@@ -48,11 +58,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Redundant meta for stubborn clients */}
         <meta
           property="og:image"
-          content="https://www.elvisforcongress.com/ELVIS_Primary_Horizontal_FullColor.png"
+          content="https://www.elvisforcongress.com/og-briefing-composite-v3.png"
         />
         <meta
           name="twitter:image"
-          content="https://www.elvisforcongress.com/ELVIS_Primary_Horizontal_FullColor.png"
+          content="https://www.elvisforcongress.com/og-briefing-composite-v3.png"
         />
       </head>
       <body className={inter.className}>
