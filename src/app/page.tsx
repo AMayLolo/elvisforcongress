@@ -21,7 +21,7 @@ export const metadata = {
     title: "Elvis Lossa for Congress | District 31",
     description:
       "Join Elvis Lossa's campaign to bring commonsense leadership and economic opportunity to District 31.",
-    images: ["https://www.elvisforcongress.com/og-briefing-composite-v3.png"],
+    images: ["https://www.elvisforcongress.com/og-briefing-composite-v2.png"],
   },
 };
 
