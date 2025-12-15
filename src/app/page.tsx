@@ -34,6 +34,14 @@ export default function Home() {
     <div>
       <Hero />
 
+      {/* Two-line heading directly under the Hero with requested casing */}
+      <section className="max-w-7xl mx-auto px-6 pt-6">
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-campaign-blue dark:text-white">
+          Serious leadership.<br />
+          Real accountability.
+        </h1>
+      </section>
+
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="max-w-4xl">
           <PageHeading as="h2">Meet Elvis</PageHeading>
