@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Briefing",
+  title: "Campaign Briefing",
   description:
     "Why this race is winnable and our focused 90-day plan for Texas' 31st District.",
   openGraph: {
@@ -9,8 +9,9 @@ export const metadata = {
     description:
       "Why this race is winnable and our focused 90-day plan for Texas' 31st District.",
     images: [
+      { url: "/ELVIS_Primary_Horizontal_FullColor.svg", alt: "Elvis for Congress" },
       {
-        url: "/og-logo.jpg", // 1200x630 JPG/PNG in /public
+        url: "/ELVIS_Primary_Horizontal_FullColor.png",
         width: 1200,
         height: 630,
         alt: "Elvis for Congress",
@@ -22,7 +23,7 @@ export const metadata = {
     title: "Elvis for Congress | Briefing",
     description:
       "Why this race is winnable and our focused 90-day plan for Texas' 31st District.",
-    images: ["/og-logo.jpg"],
+    images: ["/ELVIS_Primary_Horizontal_FullColor.png"],
   },
   alternates: { canonical: "/briefing" },
 };

@@ -21,10 +21,11 @@ export const metadata = {
     url: "https://www.elvisforcongress.com",
     title: "Elvis for Congress",
     description:
-    "Integrity, accountability, and real solutions for Texas' 31st District.",
+      "Integrity, accountability, and real solutions for Texas' 31st District.",
     images: [
+      { url: "/ELVIS_Primary_Horizontal_FullColor.svg", alt: "Elvis for Congress" },
       {
-        url: "/og-logo.jpg", // 1200x630 JPG/PNG in /public
+        url: "/ELVIS_Primary_Horizontal_FullColor.png", // 1200x630 PNG fallback
         width: 1200,
         height: 630,
         alt: "Elvis for Congress",
@@ -36,7 +37,7 @@ export const metadata = {
     title: "Elvis for Congress",
     description:
       "Integrity, accountability, and real solutions for Texas' 31st District.",
-    images: ["/og-logo.jpg"],
+    images: ["/ELVIS_Primary_Horizontal_FullColor.png"], // Twitter ignores SVG
   },
 };
 
@@ -49,6 +50,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/elvis.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/portrait.jpg" />
         <link rel="manifest" href="/site.webmanifest" />
+        {/* Redundant meta for stubborn clients */}
+        <meta
+          property="og:image"
+          content="https://www.elvisforcongress.com/ELVIS_Primary_Horizontal_FullColor.png"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.elvisforcongress.com/ELVIS_Primary_Horizontal_FullColor.png"
+        />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
