@@ -118,7 +118,6 @@ export default function BriefingPage() {
                   Establish this campaign as the credible alternative in the field and consolidate voters looking for real leadership.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 italic text-sm mt-2">
-                  "You are not early — you are on time."
                 </p>
               </div>
             </div>
@@ -153,7 +152,6 @@ export default function BriefingPage() {
                   Ensure no candidate clears a majority and position this campaign as one of the top two advancing.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 italic text-sm mt-2">
-                  "There is a math-based path forward."
                 </p>
               </div>
             </div>
@@ -225,7 +223,6 @@ export default function BriefingPage() {
               </p>
               <p>Early support unlocks that next level.</p>
               <p className="font-semibold text-campaign-blue dark:text-campaign-blue text-sm sm:text-base">
-                "We are not asking you to carry this alone."
               </p>
             </div>
             <div className="mt-6 border-t border-gray-200 dark:border-gray-800" />
