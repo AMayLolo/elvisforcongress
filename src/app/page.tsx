@@ -32,7 +32,6 @@ export default function Home() {
 
   return (
     <div>
-      {/* Hero renders the logo and the two-line headline */}
       <Hero />
 
       <section className="max-w-7xl mx-auto px-6 py-16">
