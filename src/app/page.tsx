@@ -7,14 +7,21 @@ export const metadata = {
     description:
       "Join Elvis Lossa's campaign to bring commonsense leadership and economic opportunity to District 31. Volunteer, donate, or learn where he stands.",
     url: "https://www.elvisforcongress.com/",
-    // images removed to inherit global composite from layout.tsx
+    images: [
+      {
+        url: "https://www.elvisforcongress.com/og-briefing-composite-v3.png",
+        width: 1200,
+        height: 630,
+        alt: "Elvis for Congress",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Elvis Lossa for Congress | District 31",
     description:
       "Join Elvis Lossa's campaign to bring commonsense leadership and economic opportunity to District 31.",
-    // images removed to inherit global composite from layout.tsx
+    images: ["https://www.elvisforcongress.com/og-briefing-composite-v3.png"],
   },
 };
 
@@ -25,7 +32,6 @@ import SmsSignupForm from "@/components/SmsSignupForm";
 import PageHeading from "@/components/PageHeading";
 
 export default function Home() {
-  // The central Donate button should lead to the site's internal donate page
   const donateHref = "/donate";
 
   return (
@@ -66,10 +72,8 @@ export default function Home() {
             <SmsSignupForm showDonate={false} />
           </div>
 
-          {/* small privacy note under the sign-up forms */}
           <p className="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">No spam. Just updates from the campaign.</p>
 
-          {/* Single centered Donate button below both forms */}
           <div className="mt-10">
             <a
               href={donateHref}
