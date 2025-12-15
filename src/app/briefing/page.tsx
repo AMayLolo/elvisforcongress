@@ -10,7 +10,7 @@ export const metadata = {
       "Why this race is winnable and our focused 90-day plan for Texas' 31st District.",
     images: [
       {
-        url: "/og-briefing-composite.png", // 1200x630 PNG with white background
+        url: "/og-briefing-composite-v2.png",
         width: 1200,
         height: 630,
         alt: "Elvis for Congress",
@@ -23,7 +23,7 @@ export const metadata = {
     title: "Elvis for Congress | Briefing",
     description:
       "Why this race is winnable and our focused 90-day plan for Texas' 31st District.",
-    images: ["/og-briefing-composite.png"],
+    images: ["/og-briefing-composite-v2.png"],
   },
   alternates: { canonical: "/briefing" },
 };
@@ -70,6 +70,42 @@ export default function BriefingPage() {
               </p>
             </div>
             <div className="mt-6 border-t border-gray-200 dark:border-gray-800" />
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Why I Am the Credible Alternative */}
+      <section className="w-full px-4 sm:px-6 py-8 sm:py-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-5xl">
+            <h2 className="text-2xl sm:text-3xl font-bold text-campaign-blue dark:text-white mb-4">
+              Why I Am the Credible Alternative
+            </h2>
+            <div className="space-y-3 text-base sm:text-lg text-gray-700 dark:text-gray-300">
+              <p>
+                I am a U.S. Army combat veteran who has served at multiple levels of government, including most recently as Policy Coordinator for the Texas Speaker of the House. I understand how institutions function, how coalitions are built, and how results are delivered.
+              </p>
+              <p>
+                Despite being home to one of the largest military communities in the country, Texas’ 31st District has never been represented in Congress by a veteran. That disconnect matters — particularly at a time when accountability, presence, and real-world experience are increasingly important to voters.
+              </p>
+              <p>
+                This campaign is built on discipline, consistency, and respect for the district — not performance politics or personal ambition.
+              </p>
+            </div>
+
+            <div className="mt-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-campaign-blue dark:text-white mb-3">
+                Increased Attention — and Why It Helps This Campaign
+              </h3>
+              <div className="space-y-3 text-base sm:text-lg text-gray-700 dark:text-gray-300">
+                <p>
+                  This race has begun to attract attention beyond the district, including well-funded candidates with limited ties to Texas’ 31st District. While outside money and headlines can generate noise, they also invite scrutiny.
+                </p>
+                <p>
+                  As attention increases, authenticity and local credibility matter more, not less. This campaign is rooted in the district — built through service, presence, and long-standing relationships — and is well-positioned to benefit as voters and organizations look more closely at the field.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
