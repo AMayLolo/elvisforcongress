@@ -32,15 +32,8 @@ export default function Home() {
 
   return (
     <div>
+      {/* Hero renders the logo and the two-line headline */}
       <Hero />
-
-      {/* Two-line heading directly under the Hero with requested casing */}
-      <section className="max-w-7xl mx-auto px-6 pt-6">
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-campaign-blue dark:text-white">
-          <span className="block">Serious leadership.</span>
-          <span className="block">Real accountability.</span>
-        </h1>
-      </section>
 
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="max-w-4xl">
@@ -76,7 +69,9 @@ export default function Home() {
             <SmsSignupForm showDonate={false} />
           </div>
 
-          <p className="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">No spam. Just updates from the campaign.</p>
+          <p className="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">
+            No spam. Just updates from the campaign.
+          </p>
 
           <div className="mt-10">
             <a
@@ -85,7 +80,9 @@ export default function Home() {
             >
               Donate
             </a>
-            <p id="support-cta" className="text-center text-lg font-medium dark:text-white mt-3">Support the campaign!</p>
+            <p id="support-cta" className="text-center text-lg font-medium dark:text-white mt-3">
+              Support the campaign!
+            </p>
           </div>
         </div>
       </section>
