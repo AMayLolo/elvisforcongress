@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -9,10 +10,19 @@ export default function Navbar() {
   return (
     <header className="w-full bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-        <Link href="/" className="font-bold text-campaign-blue dark:text-white">
-          Elvis for Congress
+        {/* Left: Logo + Site Name (same line) */}
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/ELVIS_Primary_Horizontal_FullColor.png"
+            alt="Elvis for Congress"
+            width={180}
+            height={48}
+            priority
+          />
+          <span className="sr-only">Elvis for Congress</span>
         </Link>
 
+        {/* Mobile toggle */}
         <button
           type="button"
           aria-expanded={isOpen ? "true" : "false"}
@@ -26,6 +36,7 @@ export default function Navbar() {
           </svg>
         </button>
 
+        {/* Right: Nav links */}
         <nav
           id="primary-nav"
           className={`${isOpen ? "block" : "hidden"} md:block`}
