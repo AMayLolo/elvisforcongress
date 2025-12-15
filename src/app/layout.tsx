@@ -23,13 +23,8 @@ export const metadata = {
     description:
       "Integrity, accountability, and real solutions for Texas' 31st District.",
     images: [
-      { url: "/ELVIS_Primary_Horizontal_FullColor.svg", alt: "Elvis for Congress" },
-      {
-        url: "/ELVIS_Primary_Horizontal_FullColor.png", // 1200x630 PNG fallback
-        width: 1200,
-        height: 630,
-        alt: "Elvis for Congress",
-      },
+      { url: "/og-briefing-composite.png", width: 1200, height: 630, alt: "Elvis for Congress" },
+      { url: "/ELVIS_Primary_Horizontal_FullColor.png", width: 1200, height: 630, alt: "Elvis for Congress" },
     ],
   },
   twitter: {
@@ -37,7 +32,7 @@ export const metadata = {
     title: "Elvis for Congress",
     description:
       "Integrity, accountability, and real solutions for Texas' 31st District.",
-    images: ["/ELVIS_Primary_Horizontal_FullColor.png"], // Twitter ignores SVG
+    images: ["/og-briefing-composite.png"],
   },
 };
 

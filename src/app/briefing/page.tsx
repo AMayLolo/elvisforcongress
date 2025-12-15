@@ -9,12 +9,12 @@ export const metadata = {
     description:
       "Why this race is winnable and our focused 90-day plan for Texas' 31st District.",
     images: [
-      { url: "/ELVIS_Primary_Horizontal_FullColor.svg", alt: "Elvis for Congress" },
       {
-        url: "/ELVIS_Primary_Horizontal_FullColor.png",
+        url: "/og-briefing-composite.png", // 1200x630 PNG with white background
         width: 1200,
         height: 630,
         alt: "Elvis for Congress",
+        type: "image/png",
       },
     ],
   },
@@ -23,7 +23,7 @@ export const metadata = {
     title: "Elvis for Congress | Briefing",
     description:
       "Why this race is winnable and our focused 90-day plan for Texas' 31st District.",
-    images: ["/ELVIS_Primary_Horizontal_FullColor.png"],
+    images: ["/og-briefing-composite.png"],
   },
   alternates: { canonical: "/briefing" },
 };
