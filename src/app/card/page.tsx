@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { Twitter, Facebook, Instagram } from "lucide-react";
 
 export const metadata = {
   title: "Elvis for Congress — Info Card",
   description: "Quick info, contact, and social links for Elvis for Congress.",
-  robots: { index: false, follow: false }, // keep off search results
+  robots: { index: false, follow: false },
 };
 
 export default function CardPage() {
@@ -15,7 +16,7 @@ export default function CardPage() {
   const phone = process.env.NEXT_PUBLIC_CONTACT_PHONE || "(737) 415-0809)";
 
   const twitter = process.env.NEXT_PUBLIC_TWITTER_URL || "https://x.com/elvisfortx31?s=11";
-  const facebook = process.env.NEXT_PUBLIC_FACEBOOK_URL || "";
+  const facebook = process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://www.facebook.com/profile.php?id=61584903837276&mibextid=wwXIfr&rdid=SJmdJajLvXzaskMS&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1G736n9RE9%2F%3Fmibextid%3DwwXIfr#";
   const instagram = process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/elvisforcongress/";
 
   return (
@@ -27,34 +28,50 @@ export default function CardPage() {
             <a href={`mailto:${email}`} className="text-sky-900 dark:text-sky-300 hover:underline">
               {email}
             </a>
-            <span className="text-gray-300">|</span>
+            <span className="hidden sm:inline text-gray-300">|</span>
             <a href={`tel:${phone.replace(/[^+\d]/g, "")}`} className="text-sky-900 dark:text-sky-300 hover:underline">
               {phone}
             </a>
-            {twitter && (
-              <>
-                <span className="text-gray-300">|</span>
-                <a href={twitter} target="_blank" rel="noopener noreferrer" className="text-sky-900 dark:text-sky-300 hover:underline">
-                  X/Twitter
+
+            {/* Social icons */}
+            <div className="flex items-center gap-3 text-sky-900 dark:text-sky-300">
+              {twitter && (
+                <a
+                  href={twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter"
+                  className="hover:opacity-80"
+                >
+                  <Twitter className="h-5 w-5" />
+                  <span className="sr-only">Twitter</span>
                 </a>
-              </>
-            )}
-            {facebook && (
-              <>
-                <span className="text-gray-300">|</span>
-                <a href={facebook} target="_blank" rel="noopener noreferrer" className="text-sky-900 dark:text-sky-300 hover:underline">
-                  Facebook
+              )}
+              {facebook && (
+                <a
+                  href={facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="hover:opacity-80"
+                >
+                  <Facebook className="h-5 w-5" />
+                  <span className="sr-only">Facebook</span>
                 </a>
-              </>
-            )}
-            {instagram && (
-              <>
-                <span className="text-gray-300">|</span>
-                <a href={instagram} target="_blank" rel="noopener noreferrer" className="text-sky-900 dark:text-sky-300 hover:underline">
-                  Instagram
+              )}
+              {instagram && (
+                <a
+                  href={instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="hover:opacity-80"
+                >
+                  <Instagram className="h-5 w-5" />
+                  <span className="sr-only">Instagram</span>
                 </a>
-              </>
-            )}
+              )}
+            </div>
           </div>
         </div>
       </section>
