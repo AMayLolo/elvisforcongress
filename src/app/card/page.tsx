@@ -11,12 +11,12 @@ export default function CardPage() {
     process.env.NEXT_PUBLIC_WINRED_URL ||
     "https://secure.winred.com/elvis-for-congress/donate-hd";
 
-  const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@elvisforcongress.com";
-  const phone = process.env.NEXT_PUBLIC_CONTACT_PHONE || "+1-000-000-0000";
+  const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "campaign@elvisforcongress.com";
+  const phone = process.env.NEXT_PUBLIC_CONTACT_PHONE || "(737) 415-0809)";
 
-  const twitter = process.env.NEXT_PUBLIC_TWITTER_URL || "";
+  const twitter = process.env.NEXT_PUBLIC_TWITTER_URL || "https://x.com/elvisfortx31?s=11";
   const facebook = process.env.NEXT_PUBLIC_FACEBOOK_URL || "";
-  const instagram = process.env.NEXT_PUBLIC_INSTAGRAM_URL || "";
+  const instagram = process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/elvisforcongress/";
 
   return (
     <div className="bg-white dark:bg-gray-950">
