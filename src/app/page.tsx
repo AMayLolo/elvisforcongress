@@ -1,22 +1,27 @@
 export const metadata = {
   metadataBase: new URL("https://www.elvisforcongress.com"),
-  title: "Elvis Lossa for Congress | District 31",
+  title: "Elvis Lossa | Official Campaign Website for U.S. Congress (TX-31)",
   description:
-    "Join Elvis Lossa's campaign to bring commonsense leadership and economic opportunity to District 31. Volunteer, donate, or learn where he stands.",
+    "Official campaign website of Elvis Lossa, candidate for U.S. Congress in Texas’ 31st District. Learn about his background, values, and how to support the campaign.",
   openGraph: {
-    title: "Elvis Lossa for Congress | District 31",
+    title: "Elvis Lossa | Candidate for U.S. Congress (TX-31)",
     description:
-      "Join Elvis Lossa's campaign to bring commonsense leadership and economic opportunity to District 31. Volunteer, donate, or learn where he stands.",
+      "Official campaign website of Elvis Lossa, candidate for U.S. Congress in Texas’ 31st District.",
     url: "https://www.elvisforcongress.com/",
     images: [
-      { url: "/og-briefing-composite-v2.png", width: 1200, height: 630, alt: "Elvis for Congress" },
+      {
+        url: "/og-briefing-composite-v2.png",
+        width: 1200,
+        height: 630,
+        alt: "Elvis Lossa for Congress",
+      },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Elvis Lossa for Congress | District 31",
+    title: "Elvis Lossa | Candidate for U.S. Congress (TX-31)",
     description:
-      "Join Elvis Lossa's campaign to bring commonsense leadership and economic opportunity to District 31.",
+      "Official campaign website of Elvis Lossa, candidate for U.S. Congress in Texas’ 31st District.",
     images: ["https://www.elvisforcongress.com/og-briefing-composite-v2.png"],
   },
 };
@@ -32,11 +37,44 @@ export default function Home() {
 
   return (
     <div>
+      {/* SEO-critical H1 (visually hidden, search-visible) */}
+      <h1 className="sr-only">
+        Elvis Lossa for Congress — Candidate for U.S. Congress in Texas’ 31st District
+      </h1>
+
+      {/* Structured data to identify Elvis Lossa */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Elvis Lossa",
+            url: "https://www.elvisforcongress.com",
+            jobTitle: "Candidate for U.S. Congress",
+            affiliation: {
+              "@type": "Organization",
+              name: "Elvis Lossa for Congress",
+            },
+            address: {
+              "@type": "PostalAddress",
+              addressRegion: "TX",
+              addressCountry: "US",
+            },
+            sameAs: [
+              "https://www.facebook.com/ElvisLossa",
+              "https://www.instagram.com/ElvisLossa",
+              "https://www.linkedin.com/in/elvis-a-lossa",
+            ],
+          }),
+        }}
+      />
+
       <Hero />
 
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="max-w-4xl">
-          <PageHeading as="h2">Meet Elvis</PageHeading>
+          <PageHeading as="h2">Meet Elvis Lossa</PageHeading>
 
           <div className="space-y-6">
             <p className="text-lg font-semibold dark:text-gray-300">
@@ -44,16 +82,22 @@ export default function Home() {
             </p>
 
             <p className="text-lg dark:text-gray-300">
-              I am a U.S. Army combat veteran, a father, and a public servant. Most recently, I served as Policy Coordinator for the Texas Speaker of the House, working on complex policy and operational challenges that affect communities across our state.
+              I am Elvis Lossa, a U.S. Army combat veteran, a father, and a public servant. Most
+              recently, I served as Policy Coordinator for the Texas Speaker of the House, working
+              on complex policy and operational challenges that affect communities across our state.
             </p>
 
             <p className="text-lg dark:text-gray-300">
-              I am running for Congress because District 31 deserves representation that understands how government works and holds it accountable.
+              I am running for Congress because Texas’ 31st District deserves representation that
+              understands how government works and holds it accountable.
             </p>
 
             <div className="mt-4">
-              <Link href="/meet-elvis" className="text-sky-900 font-semibold hover:underline inline-flex items-center">
-                Read more
+              <Link
+                href="/meet-elvis"
+                className="text-sky-900 font-semibold hover:underline inline-flex items-center"
+              >
+                Read more about Elvis Lossa
                 <span className="ml-2">→</span>
               </Link>
             </div>
@@ -79,7 +123,10 @@ export default function Home() {
             >
               Donate
             </a>
-            <p id="support-cta" className="text-center text-lg font-medium dark:text-white mt-3">
+            <p
+              id="support-cta"
+              className="text-center text-lg font-medium dark:text-white mt-3"
+            >
               Support the campaign!
             </p>
           </div>
