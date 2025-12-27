@@ -105,7 +105,7 @@ export default function CardPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
           <header className="text-center">
             <h1 className="text-3xl sm:text-4xl font-extrabold text-campaign-blue dark:text-white">
-              Elvis for Congress
+              Elvis Lossa for Congress
             </h1>
             <p className="mt-2 text-lg text-gray-700 dark:text-gray-300">
               Serious leadership. Real accountability.
