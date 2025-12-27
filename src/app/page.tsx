@@ -1,12 +1,12 @@
 export const metadata = {
   metadataBase: new URL("https://www.elvisforcongress.com"),
-  title: "Elvis Lossa | Official Campaign Website for U.S. Congress (TX-31)",
+  title: "Elvis Lossa | Candidate for U.S. Congress in Texas’ 31st District",
   description:
-    "Official campaign website of Elvis Lossa, candidate for U.S. Congress in Texas’ 31st District. Learn about his background, values, and how to support the campaign.",
+    "Official campaign website of Elvis Lossa, U.S. Army combat veteran and candidate for U.S. Congress representing Texas’ 31st District, including Round Rock, Pflugerville, Killeen, Temple, Georgetown, and Central Texas communities.",
   openGraph: {
     title: "Elvis Lossa | Candidate for U.S. Congress (TX-31)",
     description:
-      "Official campaign website of Elvis Lossa, candidate for U.S. Congress in Texas’ 31st District.",
+      "Learn about Elvis Lossa, candidate for U.S. Congress representing Texas’ 31st District and Central Texas communities.",
     url: "https://www.elvisforcongress.com/",
     images: [
       {
@@ -37,12 +37,12 @@ export default function Home() {
 
   return (
     <div>
-      {/* SEO-critical H1 (visually hidden, search-visible) */}
+      {/* SEO-critical H1 */}
       <h1 className="sr-only">
         Elvis Lossa for Congress — Candidate for U.S. Congress in Texas’ 31st District
       </h1>
 
-      {/* Structured data to identify Elvis Lossa */}
+      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -55,6 +55,10 @@ export default function Home() {
             affiliation: {
               "@type": "Organization",
               name: "Elvis Lossa for Congress",
+            },
+            areaServed: {
+              "@type": "AdministrativeArea",
+              name: "Texas 31st Congressional District",
             },
             address: {
               "@type": "PostalAddress",
@@ -72,6 +76,7 @@ export default function Home() {
 
       <Hero />
 
+      {/* Meet Elvis */}
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="max-w-4xl">
           <PageHeading as="h2">Meet Elvis Lossa</PageHeading>
@@ -82,14 +87,15 @@ export default function Home() {
             </p>
 
             <p className="text-lg dark:text-gray-300">
-              I am Elvis Lossa, a U.S. Army combat veteran, a father, and a public servant. Most
-              recently, I served as Policy Coordinator for the Texas Speaker of the House, working
-              on complex policy and operational challenges that affect communities across our state.
+              I am Elvis Lossa, a U.S. Army combat veteran, a father, and a public servant.
+              Most recently, I served as Policy Coordinator for the Texas Speaker of the
+              House, working on complex policy and operational challenges that affect
+              communities across our state.
             </p>
 
             <p className="text-lg dark:text-gray-300">
-              I am running for Congress because Texas’ 31st District deserves representation that
-              understands how government works and holds it accountable.
+              I am running for Congress because Texas’ 31st District deserves representation
+              that understands how government works and holds it accountable.
             </p>
 
             <div className="mt-4">
@@ -105,6 +111,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* City / District Optimization */}
+      <section className="max-w-7xl mx-auto px-6 py-12">
+        <div className="max-w-4xl space-y-4">
+          <h2 className="text-2xl font-semibold text-sky-900 dark:text-white">
+            Representing Communities Across Central Texas
+          </h2>
+
+          <p className="text-lg dark:text-gray-300">
+            Elvis Lossa is running to represent Texas’ 31st Congressional District,
+            which includes communities across Central Texas such as Round Rock,
+            Pflugerville, Killeen, Temple, Belton, Georgetown, Harker Heights,
+            Copperas Cove, Lampasas, Llano, and San Saba. The district is diverse,
+            growing, and deserves leadership focused on results—not rhetoric.
+          </p>
+        </div>
+      </section>
+
+      {/* Signup + Donate */}
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="grid gap-6 md:grid-cols-2">
@@ -123,10 +147,7 @@ export default function Home() {
             >
               Donate
             </a>
-            <p
-              id="support-cta"
-              className="text-center text-lg font-medium dark:text-white mt-3"
-            >
+            <p className="text-center text-lg font-medium dark:text-white mt-3">
               Support the campaign!
             </p>
           </div>

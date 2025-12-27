@@ -1,11 +1,11 @@
 export const metadata = {
   title: "Elvis Lossa Biography | Meet Elvis Lossa, Candidate for Congress",
   description:
-    "Learn about Elvis Lossa — U.S. Army combat veteran, father, public servant, and candidate for U.S. Congress representing Texas’ 31st District.",
+    "Elvis Lossa is a U.S. Army combat veteran and candidate for U.S. Congress representing Texas’ 31st District, including Round Rock, Pflugerville, Killeen, Temple, Georgetown, and surrounding Central Texas communities.",
   openGraph: {
     title: "Elvis Lossa Biography | Meet Elvis Lossa",
     description:
-      "Learn about the background, values, and service of Elvis Lossa, candidate for U.S. Congress in Texas’ 31st District.",
+      "Learn about the background, values, and service of Elvis Lossa, candidate for U.S. Congress in Texas’ 31st District and Central Texas.",
     url: "https://www.elvisforcongress.com/meet-elvis",
     images: [
       {
@@ -20,7 +20,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Elvis Lossa Biography | Meet Elvis Lossa",
     description:
-      "Learn about Elvis Lossa, U.S. Army combat veteran and candidate for U.S. Congress in Texas’ 31st District.",
+      "Meet Elvis Lossa, U.S. Army combat veteran and candidate for U.S. Congress representing Texas’ 31st District.",
     images: ["https://www.elvisforcongress.com/og/meet-elvis.svg"],
   },
 };
@@ -46,6 +46,10 @@ export default function MeetElvisPage() {
             affiliation: {
               "@type": "Organization",
               name: "Elvis Lossa for Congress",
+            },
+            areaServed: {
+              "@type": "AdministrativeArea",
+              name: "Texas 31st Congressional District",
             },
             address: {
               "@type": "PostalAddress",
@@ -78,6 +82,20 @@ export default function MeetElvisPage() {
         <p className="text-lg dark:text-gray-300">
           I am running for Congress because Texas’ 31st District deserves representation
           that understands how government works and holds it accountable.
+        </p>
+
+        {/* City / District Optimization Section */}
+        <h2 className="text-2xl font-semibold text-sky-900 dark:text-white">
+          Serving Texas’ 31st Congressional District
+        </h2>
+
+        <p className="text-lg dark:text-gray-300">
+          Elvis Lossa is running to represent Texas’ 31st Congressional District, which
+          includes communities across Central Texas such as Round Rock, Pflugerville,
+          Killeen, Temple, Belton, Georgetown, Harker Heights, Copperas Cove, Lampasas,
+          Llano, San Saba, and surrounding areas. As a public servant and U.S. Army combat
+          veteran, Elvis understands the needs of growing families, veterans, and small
+          businesses throughout the district.
         </p>
 
         <h2 className="text-2xl font-semibold text-sky-900 dark:text-white">
@@ -140,12 +158,9 @@ export default function MeetElvisPage() {
         </ul>
 
         <p className="text-lg dark:text-gray-300">
-          Voters deserve honesty and clarity.
-        </p>
-
-        <p className="text-lg dark:text-gray-300">
-          District 31 is growing fast, but Washington has not kept up with the needs
-          of Central Texas.
+          District 31 — including communities like Round Rock, Georgetown, Killeen,
+          Temple, and Copperas Cove — is growing fast, but Washington has not kept up
+          with the needs of Central Texas.
         </p>
 
         <p className="text-lg dark:text-gray-300">
