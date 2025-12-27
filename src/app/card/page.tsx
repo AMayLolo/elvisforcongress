@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Facebook, Instagram } from "lucide-react";
 
-// Simple X icon (letter X, not the bird)
-function XIcon({ className = "h-9 w-9" }: { className?: string }) {
+// Simple X icon (letter X)
+function XIcon({ className = "h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -39,36 +39,60 @@ export default function CardPage() {
     <div className="bg-white dark:bg-gray-950">
       {/* Top quick links: social icons first, contact below */}
       <section className="border-b border-gray-200 dark:border-gray-800">
-        <div className="max-w-5xl mx-auto px-6 py-4">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex flex-col items-center gap-4">
-            {/* Social icons row (50% larger) */}
-            <div className="flex items-center justify-center gap-6 text-sky-900 dark:text-sky-300">
+            {/* Social icons row (50% larger, wrap on small) */}
+            <div className="flex flex-wrap items-center justify-center gap-5 text-sky-900 dark:text-sky-300">
               {xUrl && (
-                <a href={xUrl} target="_blank" rel="noopener noreferrer" aria-label="X" className="hover:opacity-80">
-                  <XIcon className="h-9 w-9" />
+                <a
+                  href={xUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X"
+                  className="p-2 hover:opacity-80"
+                >
+                  <XIcon />
                   <span className="sr-only">X</span>
                 </a>
               )}
               {facebook && (
-                <a href={facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:opacity-80">
-                  <Facebook className="h-9 w-9" />
+                <a
+                  href={facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="p-2 hover:opacity-80"
+                >
+                  <Facebook className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10" />
                   <span className="sr-only">Facebook</span>
                 </a>
               )}
               {instagram && (
-                <a href={instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:opacity-80">
-                  <Instagram className="h-9 w-9" />
+                <a
+                  href={instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="p-2 hover:opacity-80"
+                >
+                  <Instagram className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10" />
                   <span className="sr-only">Instagram</span>
                 </a>
               )}
             </div>
 
             {/* Contact lines below (larger, each on its own line) */}
-            <div className="text-center space-y-1">
-              <a href={`mailto:${email}`} className="block text-lg sm:text-xl text-sky-900 dark:text-sky-300 hover:underline">
+            <div className="text-center space-y-2">
+              <a
+                href={`mailto:${email}`}
+                className="block text-xl sm:text-2xl leading-relaxed text-sky-900 dark:text-sky-300 hover:underline break-words"
+              >
                 {email}
               </a>
-              <a href={`tel:${telHref}`} className="block text-lg sm:text-xl text-sky-900 dark:text-sky-300 hover:underline">
+              <a
+                href={`tel:${telHref}`}
+                className="block text-xl sm:text-2xl leading-relaxed text-sky-900 dark:text-sky-300 hover:underline"
+              >
                 {phone}
               </a>
             </div>
@@ -78,7 +102,7 @@ export default function CardPage() {
 
       {/* Main content */}
       <section>
-        <div className="max-w-5xl mx-auto px-6 py-12">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
           <header className="text-center">
             <h1 className="text-3xl sm:text-4xl font-extrabold text-campaign-blue dark:text-white">
               Elvis for Congress
@@ -132,19 +156,19 @@ export default function CardPage() {
             </div>
           </div>
 
-          {/* Quick CTAs */}
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+          {/* Quick CTAs (stack on mobile) */}
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
               href={winredUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-md bg-red-700 hover:bg-red-800 text-white px-5 py-2 font-semibold"
+              className="w-full sm:w-auto inline-flex items-center justify-center rounded-md bg-red-700 hover:bg-red-800 text-white px-5 py-2.5 font-semibold"
             >
               Donate
             </a>
             <Link
               href="/"
-              className="inline-flex items-center rounded-md border border-gray-300 dark:border-gray-700 px-5 py-2 text-sky-900 dark:text-sky-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+              className="w-full sm:w-auto inline-flex items-center justify-center rounded-md border border-gray-300 dark:border-gray-700 px-5 py-2.5 text-sky-900 dark:text-sky-300 hover:bg-gray-50 dark:hover:bg-gray-800"
             >
               Go to Home
             </Link>
