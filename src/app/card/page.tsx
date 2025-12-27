@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Facebook, Instagram } from "lucide-react";
 
 // Simple X icon (letter X, not the bird)
-function XIcon({ className = "h-6 w-6" }: { className?: string }) {
+function XIcon({ className = "h-9 w-9" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -40,36 +40,35 @@ export default function CardPage() {
       {/* Top quick links: social icons first, contact below */}
       <section className="border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-5xl mx-auto px-6 py-4">
-          <div className="flex flex-col items-center gap-3">
-            {/* Social icons row (slightly larger) */}
-            <div className="flex items-center justify-center gap-5 text-sky-900 dark:text-sky-300">
+          <div className="flex flex-col items-center gap-4">
+            {/* Social icons row (50% larger) */}
+            <div className="flex items-center justify-center gap-6 text-sky-900 dark:text-sky-300">
               {xUrl && (
                 <a href={xUrl} target="_blank" rel="noopener noreferrer" aria-label="X" className="hover:opacity-80">
-                  <XIcon className="h-6 w-6" />
+                  <XIcon className="h-9 w-9" />
                   <span className="sr-only">X</span>
                 </a>
               )}
               {facebook && (
                 <a href={facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:opacity-80">
-                  <Facebook className="h-6 w-6" />
+                  <Facebook className="h-9 w-9" />
                   <span className="sr-only">Facebook</span>
                 </a>
               )}
               {instagram && (
                 <a href={instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:opacity-80">
-                  <Instagram className="h-6 w-6" />
+                  <Instagram className="h-9 w-9" />
                   <span className="sr-only">Instagram</span>
                 </a>
               )}
             </div>
 
-            {/* Contact row below */}
-            <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
-              <a href={`mailto:${email}`} className="text-sky-900 dark:text-sky-300 hover:underline">
+            {/* Contact lines below (larger, each on its own line) */}
+            <div className="text-center space-y-1">
+              <a href={`mailto:${email}`} className="block text-lg sm:text-xl text-sky-900 dark:text-sky-300 hover:underline">
                 {email}
               </a>
-              <span className="hidden sm:inline text-gray-300">|</span>
-              <a href={`tel:${telHref}`} className="text-sky-900 dark:text-sky-300 hover:underline">
+              <a href={`tel:${telHref}`} className="block text-lg sm:text-xl text-sky-900 dark:text-sky-300 hover:underline">
                 {phone}
               </a>
             </div>
