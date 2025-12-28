@@ -3,6 +3,7 @@ import PageHeading from "@/components/PageHeading";
 import Image from "next/image";
 import EmailSignupForm from "@/components/EmailSignupForm";
 import SmsSignupForm from "@/components/SmsSignupForm";
+import Link from "next/link";
 
 export const metadata = {
   title: "Where Elvis Lossa Stands | Issues & Priorities for Texas’ 31st District",
@@ -34,7 +35,7 @@ export const metadata = {
 export default function IssuesPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
-      {/* Structured Data: FAQ + Person Issue Context */}
+      {/* Structured Data: FAQ */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -104,13 +105,29 @@ export default function IssuesPage() {
           </div>
         </div>
 
+        {/* ✅ OFFICIAL FILING CONTEXT (NEW — HIGH TRUST SIGNAL) */}
+        <section className="space-y-4 max-w-4xl">
+          <p className="text-lg dark:text-gray-300">
+            As an officially filed candidate for U.S. Congress, Elvis Lossa is
+            focused on practical solutions for Texas’ 31st Congressional
+            District. Full filing details are available through the{" "}
+            <Link
+              href="/official-filing"
+              className="text-sky-900 font-semibold hover:underline"
+            >
+              Federal Election Commission
+            </Link>
+            .
+          </p>
+        </section>
+
         {/* Issues Overview */}
         <section className="space-y-4 max-w-4xl">
           <p className="text-lg dark:text-gray-300">
             Elvis Lossa is running to represent communities across Central Texas —
-            including Round Rock, Pflugerville, Killeen, Temple, Belton, Georgetown,
-            Harker Heights, Copperas Cove, Lampasas, Llano, and San Saba — with a focus
-            on practical solutions and measurable results.
+            including Round Rock, Pflugerville, Killeen, Temple, Belton,
+            Georgetown, Harker Heights, Copperas Cove, Lampasas, Llano, and San
+            Saba — with a focus on practical solutions and measurable results.
           </p>
         </section>
 
@@ -119,7 +136,8 @@ export default function IssuesPage() {
         <section className="py-12">
           <div className="mb-6 max-w-3xl">
             <p className="text-lg font-medium text-sky-900 dark:text-white">
-              Stay up to date on these issues and how Elvis Lossa will fight for you.
+              Stay up to date on these issues and how Elvis Lossa will fight for
+              you.
             </p>
           </div>
 

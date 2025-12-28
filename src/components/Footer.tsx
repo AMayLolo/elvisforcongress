@@ -6,8 +6,7 @@ import { Twitter, Instagram, Facebook, Linkedin, X } from "lucide-react";
 
 export default function Footer() {
   const pathname = usePathname();
-  // NOTE: I added placeholder social links — replace them with the campaign's
-  // actual social profile URLs when available.
+
   const socials = [
     { href: "https://x.com/elvisfortx31?s=11", label: "X (formerly Twitter)", Icon: X },
     { href: "https://instagram.com/elvisforcongress", label: "Instagram", Icon: Instagram },
@@ -19,9 +18,7 @@ export default function Footer() {
     <footer className="w-full bg-sky-900 py-10 mt-20 text-white">
       <div className="max-w-6xl mx-auto px-4 text-center space-y-4">
 
-        {/* Donate CTA removed from footer per request */}
-
-        {/* Social icons moved to the top of the footer, larger, with more spacing and brand-colored hover */}
+        {/* Social icons */}
         <div className="flex justify-center space-x-6 mb-3">
           {socials.map(({ href, label, Icon }) => {
             const brandHover: Record<string, string> = {
@@ -30,6 +27,7 @@ export default function Footer() {
               Facebook: "hover:text-[#1877F2]",
               LinkedIn: "hover:text-[#0A66C2]",
             };
+
             return (
               <a
                 key={label}
@@ -37,26 +35,36 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className={`text-white/80 transition ${brandHover[label] || "hover:text-white"}`}>
+                className={`text-white/80 transition ${brandHover[label] || "hover:text-white"}`}
+              >
                 <Icon className="h-6 w-6 transform scale-125" />
               </a>
             );
           })}
         </div>
 
-        <div className="flex justify-center space-x-6">
-          <a href="/privacy" className="text-white/80 hover:underline text-sm">
+        {/* Footer links */}
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          <Link href="/privacy" className="text-white/80 hover:underline text-sm">
             Privacy Policy
-          </a>
-          <a href="/terms" className="text-white/80 hover:underline text-sm">
+          </Link>
+          <Link href="/terms" className="text-white/80 hover:underline text-sm">
             Terms of Use
-          </a>
-          <a href="/contact" className="text-white/80 hover:underline text-sm">
+          </Link>
+          <Link href="/contact" className="text-white/80 hover:underline text-sm">
             Contact
-          </a>
+          </Link>
+          <Link
+            href="/official-filing"
+            className="text-white/80 hover:underline text-sm"
+          >
+            Official Candidate Filing (FEC)
+          </Link>
         </div>
 
-        <p className="text-white/90 mt-2">Paid for by Elvis for Congress 2026.</p>
+        <p className="text-white/90 mt-2">
+          Paid for by Elvis for Congress 2026.
+        </p>
 
         <p className="text-xs text-white/70">
           © {new Date().getFullYear()} Elvis for Congress. All rights reserved.

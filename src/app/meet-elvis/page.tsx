@@ -26,6 +26,7 @@ export const metadata = {
 };
 
 import Image from "next/image";
+import Link from "next/link";
 import PageHeading from "@/components/PageHeading";
 
 export default function MeetElvisPage() {
@@ -82,6 +83,19 @@ export default function MeetElvisPage() {
         <p className="text-lg dark:text-gray-300">
           I am running for Congress because Texas’ 31st District deserves representation
           that understands how government works and holds it accountable.
+        </p>
+
+        {/* ✅ OFFICIAL FILING LINK (NEW — HIGH TRUST SIGNAL) */}
+        <p className="text-lg dark:text-gray-300">
+          Elvis Lossa is an officially filed candidate for U.S. Congress in Texas’ 31st
+          District. View the{" "}
+          <Link
+            href="/official-filing"
+            className="text-sky-900 font-semibold hover:underline"
+          >
+            official candidate filing with the Federal Election Commission
+          </Link>
+          .
         </p>
 
         {/* City / District Optimization Section */}
