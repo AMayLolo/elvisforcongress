@@ -2,11 +2,11 @@ export const metadata = {
   metadataBase: new URL("https://www.elvisforcongress.com"),
   title: "Elvis Lossa | Candidate for U.S. Congress in Texas’ 31st District",
   description:
-    "Official campaign website of Elvis Lossa, U.S. Army combat veteran and candidate for U.S. Congress representing Texas’ 31st District, including Round Rock, Pflugerville, Killeen, Temple, Georgetown, and Central Texas communities.",
+    "Official campaign website of Elvis Lossa, U.S. Army combat veteran and candidate for U.S. Congress representing Texas’ 31st District and Central Texas communities.",
   openGraph: {
     title: "Elvis Lossa | Candidate for U.S. Congress (TX-31)",
     description:
-      "Learn about Elvis Lossa, candidate for U.S. Congress representing Texas’ 31st District and Central Texas communities.",
+      "Learn about Elvis Lossa, candidate for U.S. Congress representing Texas’ 31st District and Central Texas.",
     url: "https://www.elvisforcongress.com/",
     images: [
       {
@@ -42,35 +42,79 @@ export default function Home() {
         Elvis Lossa for Congress — Candidate for U.S. Congress in Texas’ 31st District
       </h1>
 
-      {/* Structured Data */}
+      {/* Structured Data: Person + FAQ */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Elvis Lossa",
-            url: "https://www.elvisforcongress.com",
-            jobTitle: "Candidate for U.S. Congress",
-            affiliation: {
-              "@type": "Organization",
-              name: "Elvis Lossa for Congress",
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Elvis Lossa",
+              url: "https://www.elvisforcongress.com",
+              jobTitle: "Candidate for U.S. Congress",
+              affiliation: {
+                "@type": "Organization",
+                name: "Elvis Lossa for Congress",
+              },
+              areaServed: {
+                "@type": "AdministrativeArea",
+                name: "Texas 31st Congressional District",
+              },
+              address: {
+                "@type": "PostalAddress",
+                addressRegion: "TX",
+                addressCountry: "US",
+              },
+              sameAs: [
+                "https://www.facebook.com/ElvisLossa",
+                "https://www.instagram.com/ElvisLossa",
+                "https://www.linkedin.com/in/elvis-a-lossa",
+              ],
             },
-            areaServed: {
-              "@type": "AdministrativeArea",
-              name: "Texas 31st Congressional District",
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Who is Elvis Lossa?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text:
+                      "Elvis Lossa is a U.S. Army combat veteran, father, and public servant running for U.S. Congress in Texas’ 31st Congressional District.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What does Elvis Lossa stand for?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text:
+                      "Elvis Lossa stands for accountable government, economic opportunity, public safety, strong support for veterans, and practical solutions that serve working families.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Why is Elvis Lossa running for Congress?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text:
+                      "Elvis Lossa is running for Congress to bring experience, transparency, and a results-driven approach to representing Texas’ 31st District.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Which communities does Elvis Lossa represent?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text:
+                      "Texas’ 31st Congressional District includes communities such as Round Rock, Pflugerville, Killeen, Temple, Belton, Georgetown, Harker Heights, Copperas Cove, Lampasas, Llano, and San Saba.",
+                  },
+                },
+              ],
             },
-            address: {
-              "@type": "PostalAddress",
-              addressRegion: "TX",
-              addressCountry: "US",
-            },
-            sameAs: [
-              "https://www.facebook.com/ElvisLossa",
-              "https://www.instagram.com/ElvisLossa",
-              "https://www.linkedin.com/in/elvis-a-lossa",
-            ],
-          }),
+          ]),
         }}
       />
 
@@ -108,23 +152,6 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* City / District Optimization */}
-      <section className="max-w-7xl mx-auto px-6 py-12">
-        <div className="max-w-4xl space-y-4">
-          <h2 className="text-2xl font-semibold text-sky-900 dark:text-white">
-            Representing Communities Across Central Texas
-          </h2>
-
-          <p className="text-lg dark:text-gray-300">
-            Elvis Lossa is running to represent Texas’ 31st Congressional District,
-            which includes communities across Central Texas such as Round Rock,
-            Pflugerville, Killeen, Temple, Belton, Georgetown, Harker Heights,
-            Copperas Cove, Lampasas, Llano, and San Saba. The district is diverse,
-            growing, and deserves leadership focused on results—not rhetoric.
-          </p>
         </div>
       </section>
 
